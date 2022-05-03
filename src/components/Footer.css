@@ -1,0 +1,99 @@
+.footer{
+    width:100%;
+    background-color: rgb(249,249,249);
+    bottom: 0px;
+    height:1500px;
+}
+
+.firstdiv{
+    width:100%;
+    height:10%;
+    background-color: rgb(255,255,255);
+   
+}
+#footertext{
+    display:inline;
+    margin:1%;
+    font-size: larger;
+
+}
+.seconddiv{
+    width:90%;
+    margin:auto;
+    margin-top:2%;
+    background-color:  rgb(255,255,255);
+    display:flex;
+    padding:2%;
+    /* height:50px; */
+}
+.div1
+{
+    /* border: 1px solid black; */
+    height: fit-content;
+    margin-top: -5px;
+}
+.font
+{
+    font-size: 20px;
+    font-weight: 700;
+}
+.div1 img
+{
+    width: 100%;
+    height:80px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top:2%;
+}
+.divs2
+{
+    /* border: 1px solid tomato; */
+    text-align: center;
+    margin-left: 65px;
+    margin-top: 10px;
+    width: 225px;
+}
+
+
+
+.main_div2
+{
+    margin: auto;
+    width: 85%;
+    /* border: 1px solid green; */
+    height: 700px;
+    box-sizing: border-box;
+    padding: 50px 0px;
+}
+.top_div
+{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+    padding: 15px 0px;
+}
+.font1
+{
+    font-size: 19px;
+    font-weight: 550;
+    color: gray;
+    margin-top: 10px;
+}
+.points
+{
+    width: 350px;
+    height: 40px;
+    font-size: 18px;
+}
+.sub_btn
+{
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 44px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
