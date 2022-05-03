@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Footer.css"
 import {Link} from "react-router-dom"
-
+import {BsFacebook} from "react-icons/bs"
 export const Footer = () => {
 
 
@@ -141,7 +141,8 @@ export const Footer = () => {
             <button class="sub_btn">Subscribe</button>
       </div>
 
-      <div>
+      <div> 
+      <BsFacebook></BsFacebook>
 
       </div>
 
