@@ -2,7 +2,7 @@
     width:100%;
     background-color: rgb(249,249,249);
     bottom: 0px;
-    height:1500px;
+   
 }
 
 .firstdiv{
@@ -58,21 +58,25 @@
 
 .main_div2
 {
-    margin: auto;
-    width: 85%;
+   margin:auto;
+    width:90%;
     /* border: 1px solid green; */
-    height: 700px;
+    height: 12%;
     box-sizing: border-box;
-    padding: 50px 0px;
+    padding-top:2%;
+    display: flex;
+    justify-content:space-between;
+   
 }
 .top_div
 {
     display: flex;
-    width: 100%;
-    height: 75px;
+    width:50%;
+    height:100%;
     /* border: 1px solid yellow; */
     box-sizing: border-box;
-    padding: 15px 0px;
+    padding: 2%;
+   
 }
 .font1
 {
@@ -96,4 +100,47 @@
     border: none;
     font-size: 16px;
     cursor: pointer;
+}
+.thirdright{
+    display:flex;
+    width:50%;
+   
+    padding-top:2%;
+    justify-content:space-around;
+
+
+}
+.icons{
+
+    font-size: 40px;
+}
+.list-unstyled{
+    list-style: none;
+    text-align: left;
+}
+.row{
+    display:flex;
+    margin:auto;
+   justify-content:space-between;
+   width:90%;
+   font-size: 20px;
+  
+}
+
+.scan{
+   height:80px;
+   max-width: auto;
+}
+.belowimg{
+    width:100%;
+    height:10%;
+   
+}
+.belowimg>img{
+   
+    width:3%;
+    margin-left:2%;
+     margin:2% 2% 0 0; 
+
+    height:18%;
 }
