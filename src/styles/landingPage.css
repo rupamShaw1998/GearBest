@@ -1,0 +1,47 @@
+.App {
+    text-align: center;
+}
+
+.mainDiv {
+    width: 85%;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin: auto;
+    display: grid;
+}
+.titleP{
+    height: 50%;
+}
+.recommendDiv {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.categoryDiv {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.categoryDiv>img {
+    width: 80%;
+    height: 60%;
+}
+.categoryDiv>span {
+    display: flex;
+    margin-left: 25%;
+}
+
+.categoryDiv>span>p {
+    padding-left: 5%;
+}
+
+.categoryDiv>span>:nth-child(2) {
+    text-decoration: line-through;
+
+}
+
+.titleP {
+    height: 10%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
