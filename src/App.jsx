@@ -5,9 +5,9 @@ import {Footer} from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { LandingPage } from './components/landingPage';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  
   return (
     <div className="App">
       <Navbar />
