@@ -4,22 +4,99 @@ export const Navbar = () => {
     return (
         <div id="nav">
             <div id="nav-up">
-                <div id="nav-up-image"><img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" /></div>
+                <div id="nav-up-image">
+                    <a href="https://www.gearbest.com/">
+                        <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" />
+                    </a>
+                </div>
                 <div id="nav-up-right">
                     <div id="nav-settings">
-                        <div>Save 3 with app</div>
-                        <div>support center</div>
-                        <div>ship to usd</div>
-                        <div>Language</div>
-                        <div>Country website</div>
+                        <div id="save-app">
+                            <div style={{display: "flex"}}>
+                                <img src="https://pixsector.com/cache/753f2096/avb4326d4ac628bc1c307.png" />
+                                <p>Save $3 with App</p> 
+                            </div>                                    
+                            <div className="dropdown" id="save-App">
+                                <h4 style={{textAlign: "left", margin: "25px 0 -10px 20px"}}>Download App!</h4>
+                                <p style={{textAlign: "left", marginLeft: "20px"}}>Save $3 with App & New User Only</p>
+                                <div style={{display: "flex"}}>
+                                    <img style={{width: "100px", height: "100px", marginLeft: "20px"}} src="https://images.all-free-download.com/images/graphiclarge/qr_code_198897.jpg" alt="" />
+                                    <div id="download">
+                                        <img style={{width: "125px", height: "45px", marginLeft: "5px"}} src="https://www.pikpng.com/pngl/m/506-5064409_apple-ios-download-on-apple-store-clipart.png" alt="" />
+                                        <img style={{width: "120px", height: "40px", marginLeft: "5px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/640px-Google_Play_Store_badge_EN.svg.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Support Center</p>
+                        </div>
+                        <div>
+                            <p>Ship to US/USD</p>
+                        </div>
+                        <div id="lang">
+                            <p>Language</p>
+                            <div className="dropdown languages">
+                                <p>Global(English)</p>
+                                <p>France</p>
+                                <p>Espana</p>
+                                <p>Portugal</p>
+                                <p>Italia</p>
+                                <p>Duetschland</p>
+                                <p>Brasil</p>
+                                <p>Tukiye</p>
+                                <p>Polska</p>
+                                <p>Japan</p>
+                            </div>
+                        </div>
+                        <div id="country">
+                            <p>Country Website</p>
+                            <div className="dropdown languages">
+                                <p>Global(English)</p>
+                                <p>France</p>
+                                <p>Espana</p>
+                                <p>Portugal</p>
+                                <p>Italia</p>
+                                <p>Duetschland</p>
+                                <p>Brasil</p>
+                                <p>Tukiye</p>
+                                <p>Polska</p>
+                                <p>Japan</p>
+                            </div>
+                        </div>
                     </div>
                     <div id="nav-functions">
-                        <div>
-                            <input type="text" placeholder="search gadgets" />
+                        <div id="input-box">
+                            <input type="text" placeholder="Search Gadgets" />
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/search-1768073-1502246.png" alt="" />
                         </div>
-                        <div>Sign In</div>
-                        <div>Favorites</div>
-                        <div>Cart</div>
+                        <div id="signIn">                          
+                            <div style={{display: "flex"}}>
+                                <img style={{width: "20px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
+                                <div>Sign In</div>
+                            </div>
+                            <div className="dropdown">
+
+                            </div>
+                        </div>
+                        <div id="favorites">
+                            <div style={{display: "flex"}}>
+                                <img style={{width: "20px"}} src="https://cdn-icons-png.flaticon.com/512/73/73814.png" alt="" />
+                                <div>Favorites</div>
+                            </div>
+                            <div className="dropdown">
+                                
+                            </div>
+                        </div>
+                        <div id="cart">
+                            <div style={{display: "flex"}}>
+                                <img style={{width: "20px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
+                                <div>Cart</div>
+                            </div>
+                            <div className="dropdown">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
