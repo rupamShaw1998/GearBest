@@ -1,0 +1,39 @@
+#nav {
+    border: 2px solid red;
+    width: 100%;
+    height: 144px;
+}
+#nav-up {
+    border: 1px solid blue;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-up-image {
+    border: 1px solid brown;
+}
+#nav-up-image>img {
+    width: 55%;
+    margin: 5% 0 0 5%;
+}
+#nav-up-right {
+    width: 60%;
+}
+#nav-settings {
+    border: 1px solid orangered;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#nav-functions {
+    border: 1px solid yellow;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#nav-down {
+    border: 1px solid green;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+}
