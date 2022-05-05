@@ -11,7 +11,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <LandingPage/>
+        <LandingPage/>
+     
      <Footer></Footer>
     </div>
   );
