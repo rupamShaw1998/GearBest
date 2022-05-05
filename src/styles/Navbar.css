@@ -4,36 +4,110 @@
     height: 144px;
 }
 #nav-up {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 75%;
     display: flex;
     justify-content: space-between;
 }
 #nav-up-image {
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
+    width: 30%;
 }
-#nav-up-image>img {
-    width: 55%;
-    margin: 5% 0 0 5%;
+#nav-up-image img {
+    width: 200px;
+    margin: 6.5% 0 0 0%;
 }
 #nav-up-right {
-    width: 60%;
+    /* border: 1px solid black; */
+    width: 70%;
 }
 #nav-settings {
-    border: 1px solid orangered;
+    /* border: 1px solid orangered; */
     height: 50%;
+    width: 90%;
+    margin-left: 2%;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    align-items: center;
+}
+#save-app {
+    position: relative;
+    display: inline-block;
+}
+#save-app img {
+    width: 25px;
+    height: 20px;
+    margin-top: 14px;
+}
+#nav-settings>div {
+    margin-left: 5%;
+}
+#nav-settings p {
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+    background-color: white;
+}
+#save-App {
+    width: 270px;
+    height: 240px;
+}
+#save-app:hover .dropdown {
+    display: block;
+}
+.languages {
+    height: 350px;
+    width: 120px;
+}
+#lang:hover .dropdown {
+    display: block;
+}
+#country:hover .dropdown {
+    display: block;
+}
+#lang>div>p:hover, #country>div>p:hover {
+    background-color: rgb(231, 231, 231);
 }
 #nav-functions {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     height: 50%;
+    width: 900px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+#input-box {
+    background-color: #ffda00;
+    border-radius: 15px;
+    width: 350px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+#input-box input {
+    border: 0;
+    border-radius: 15px 0 0 15px;
+    height: 29px;
+    width: 300px;
+    margin: 2px;
+}
+#input-box input:focus {
+    outline: none;
+}
+#input-box img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
 }
 #nav-down {
     border: 1px solid green;
     height: 25%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }

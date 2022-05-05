@@ -16,12 +16,12 @@ export const CartItem = () => {
               alt=""
               srcset=""
             />
-            <div>
+            <div className={styles.ContentDiv}>
             <p>Global Version MI 11 Ultra 6.3 inch Smartphone</p>
             <p>Color:Gold</p>
             <p>Size:8G 512GB</p>
             <p>In Stock:P-1000</p>
-          </div>
+        </div>
           </div>
           
           <div >
