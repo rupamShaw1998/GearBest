@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom"
 import {useState ,useEffect} from 'react'
 
 
-export const EmployeeDetails = () => {
+export const ProductDetail = () => {
     const  [product,setProduct] = useState([])
     
     const {id} = useParams()
     useEffect(()=> {
-       axios.get(`http://localhost:8080/employee/${id}`).then(({data})=>{
+       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
            setProduct (data)
        })
     },[])
@@ -30,14 +30,7 @@ export const EmployeeDetails = () => {
               </div>
              
           </div>
-     
-          
-        
-       
-        <span className="user_salary">${product.salary}</span>
-        <span className="tasks">
-          <li className="task">{user.tasks}</li>
-        </span>
+    
         
       </div>
     );
