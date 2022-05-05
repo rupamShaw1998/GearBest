@@ -6,13 +6,13 @@ import axios from "axios"
 export const CartItem = () => {
   const [Quantity, setQuantity] = useState(0);
 
-  const [data,setdata] = useState([]);
-  console.log(data)
-  useEffect(() => {
-    axios.get("http://localhost:7005/kitchen").then(({data})=>{
-      setdata(data)
-    })
-  },[])
+  // const [data,setdata] = useState([]);
+  // console.log(data)
+  // useEffect(() => {
+  //   axios.get("http://localhost:7005/kitchen").then(({data})=>{
+  //     setdata(data)
+  //   })
+  // },[])
   
   return (
    
