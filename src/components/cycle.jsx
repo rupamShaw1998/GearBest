@@ -26,7 +26,7 @@ export const Cycle = () => {
                 <p className="titleP">{e.title}</p>
                 <span>
                 <p>${e.price}</p>
-                <p>$ {(e.price*1.3).toFixed(2)}</p>
+                <p>$ {(e.price*1.5).toFixed(0)}.00</p>
                 </span>
                 </div>
             ))}
