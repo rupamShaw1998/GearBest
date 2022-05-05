@@ -13,6 +13,4 @@ export const  Category=({image,title,price})=>{
 </span>
 </div>
 
-    )
-}
-
+    )}
