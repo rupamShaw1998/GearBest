@@ -2,6 +2,7 @@ import { CartItem } from "../Cart/CartItem";
 import { Card } from "../UI/Card";
 import styles from "./Cart.module.css";
 
+
 export const Cart = () => {
   return (
     <div>
