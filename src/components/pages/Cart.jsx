@@ -1,6 +1,7 @@
-import { CartItem } from "../components/Cart/CartItem";
-import { Card } from "../components/UI/Card";
+import { CartItem } from "../Cart/CartItem";
+import { Card } from "../UI/Card";
 import styles from "./Cart.module.css";
+
 
 export const Cart = () => {
   return (

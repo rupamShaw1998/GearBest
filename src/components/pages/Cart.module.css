@@ -21,6 +21,8 @@
 .assurance{
     display: flex;
     justify-content:space-between;
+    /* border: 1px solid black; */
+    
     
 }
 .Guarantee{
@@ -37,12 +39,15 @@
 .checkout{
     display: flex;
      justify-content:space-between;
-    
+     /* border: 1px solid black; */
      width: 40%;
      padding: 20px;
 }
+.checkout > img{
+    width: 150px;height: 50px;
+}
 .InsideDivText{
-    color:rgb(194, 193, 193);
+    color:rgb(61, 61, 61);
     font-weight:10px;
 }
 .paymentoptioncontainer{
@@ -62,10 +67,14 @@
 }
 .fourtyfivedays{
     display:flex;
+    /* border: 1px solid black; */
 }
 .logoImageContainer{
     width:40px;
+    height:30px;
     margin-right:10px;
+    /* border: 1px solid black; */
+    margin-top:10px;
 }
 .TotalText{
     font-size:25px;

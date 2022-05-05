@@ -5,6 +5,7 @@
 }
 img{
     width:100px;
+    height: 100px;
 
 }
 .Container{
@@ -20,6 +21,8 @@ img{
 .ImageDiv{
    display: flex;
    justify-content:space-between;
+   height: 100px;
+   /* border:1px solid black */
     
 }
 .boldText{
@@ -38,6 +41,12 @@ img{
     color:red
 }
 .brandName{
-    padding:20px;
-    font-weight: bold
+    font-weight: bold;
+    /* border:1px solid black */
+}
+/* .ContentDiv{
+    border:1px solid black
+} */
+.ContentDiv > p{
+    margin-bottom:-18px;
 }
