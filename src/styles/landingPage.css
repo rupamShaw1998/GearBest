@@ -3,7 +3,7 @@
 .mainDiv {
     width: 85%;
     border: 1px solid black;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin: auto;
     display: grid;
 }

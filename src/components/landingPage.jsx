@@ -49,7 +49,7 @@ export const LandingPage = () => {
        {allprod.map((e)=>( 
 
          <div className="categoryDiv">
-         <Link>
+         <Link to={`/product/${e._id}`}>
          <img src={e.imgUrl}/>
          </Link>
          
