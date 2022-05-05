@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import "../styles/landingPage.css"
 import "../styles/collection.css"
 import { CollectionCom } from './CollectionComp';
-import { Category } from './LandingPageImg';
+
 
 export const LandingPage = () => {
   const [allprod, setAllpro] = useState([]);
@@ -46,11 +46,22 @@ export const LandingPage = () => {
       </div>
       <h2 id='Recomm'>RECOMMENDED FOR YOU</h2>
       <div className="recommendDiv">
+       {allprod.map((e)=>( 
 
-
-      {allprod.map((e, i) => (
-        <Category key={i} image={e.imgUrl} title={e.title} price={e.price} />
-      ))}
+         <div className="categoryDiv">
+         <Link>
+         <img src={e.imgUrl}/>
+         </Link>
+         
+         <p className="titleP">{e.title}</p>
+         <span>
+         <p>${e.price}.00</p>
+         <p>$ {(e.price*1.2).toFixed(2)} </p>
+         </span>
+         </div>
+         ))
+        }
+     
       </div>
     </div>
   )
