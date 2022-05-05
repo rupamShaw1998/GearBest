@@ -1,0 +1,33 @@
+.collectionData{
+    display: flex;
+    justify-content: space-around;
+}
+#collDiv{
+    width: 24%;
+    height: 95%;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+    
+}
+
+.collectionData {
+    /* border: 1px solid black; */
+  
+}
+#collDiv>img{
+   width: 70%;
+   height: 50%;
+   margin: auto;
+}
+img{
+    height: 100px;
+}
+.collection>h2 {
+   text-align: left;
+   font-size: 25px;
+   margin-left: 30px;
+   font-weight: 500;
+}
+#collDiv:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
