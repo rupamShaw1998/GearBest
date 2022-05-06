@@ -8,13 +8,19 @@ import { Routes, Route } from "react-router-dom";
 import { ProductDetail } from "./components/ProductDetail";
 import { Cart } from "./components/pages/Cart";
 import { Category } from './components/allCatagory';
-import {CartPage} from './components/CartPage'
+import {CartPage} from './components/CartPage';
+import { KitchenDetail } from "./components/KitchenDetail";
+import { LaptopDetail } from "./components/LaptopDetail";
+import { ScienceDetail } from "./components/ScienceDetail";
+import { MobileDetail } from "./components/MobileDetail";
+import { CoverPic } from "./components/CoverPic";
 
 function App() {
   
   return (
     <div className="App">
       <Navbar />
+      <CoverPic />
       <Routes>
         <Route path="/catagorys" element={<Category />}></Route>
         <Route path="" element={<LandingPage />}></Route>
