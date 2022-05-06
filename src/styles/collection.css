@@ -2,28 +2,31 @@
     display: flex;
     justify-content: space-around;
     /* height: 10%; */
-    border: 1px solid rgb(53, 32, 215);
+    /* border: 1px solid rgb(81, 77, 112); */
+    
 }
 
 #collDiv {
-    /* width: 24%; */
-
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
-    padding: 20px;
-    border: 1px solid rgb(212, 195, 195);
+    /* padding: 20px; */
+    /* border: 1px solid rgb(232, 35, 35); */
+    margin-left: -18px;
+}
+#collDiv:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 }
-
 .collection {
-    border: 1px solid rgb(247, 7, 7);
-
-
+    /* border: 1px solid rgb(245, 45, 45); */
+  /* margin-left: -5px; */
 }
 
 #collDiv img {
-    width: 70%;
-    height: 50%;
+    width: 90%;
+    height: 60%;
     margin: auto;
 }
 
