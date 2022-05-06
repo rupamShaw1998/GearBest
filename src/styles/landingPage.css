@@ -6,9 +6,6 @@
     display: grid;
 }
 
-.titleP {
-    font-size: 90%;
-}
 
 .recommendDiv {
     display: grid;
@@ -66,7 +63,7 @@
 .titleP {
     overflow: hidden;
     text-overflow: ellipsis;
-    
+    font-size: 90%;
 }
 
 #Recomm {
@@ -74,4 +71,20 @@
     font-size: 22px;
     margin-left: 30px;
     font-weight: 700;
+}
+#tppp{
+  height: 40px;
+}
+
+#skn2{
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 20px;
+    width: 95%;
+}
+#skn2 img{
+    width: 200px;
+    height: 100%;
 }

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import axios from 'axios';
 import "../styles/mobile.css"
 
-
 export const Cycle = () => {
 
     const [cycle, setCycle] = useState([]);

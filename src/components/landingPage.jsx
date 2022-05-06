@@ -45,7 +45,15 @@ export const LandingPage = () => {
 
   return (
     <div className="mainDiv">
+    
       <div className='collectionDiv'>
+      <div id='skn2'>
+      <img src='https://uidesign.gbtcdn.com/GB/image/9534/New+Arrival+450x30+KUU.png'/>
+      <img src='https://uidesign.gbtcdn.com/GB/image/8823/8230X120-en.jpg'/>
+      <img src='https://uidesign.gbtcdn.com/GB/image/8823/8PC+230X120+EN.jpg'/>
+      <img src='https://uidesign.gbtcdn.com/GB/image/7257/230_120_en.jpg?imbypass=true'/>
+      <img src='https://uidesign.gbtcdn.com/GB/image/6874/230x120b_en.jpg'/>
+      </div>
       <div className='collection'>
       <h2>COLLECTION</h2>
           <div className="collectionData">
@@ -67,8 +75,10 @@ export const LandingPage = () => {
 
             {superDeals.map((e, i) => (
               <div id="collDiv">
+              <Link to="/catagorys" >
                 <img src={e.imgUrl} />
-                <p className="titleP">{e.title}</p>
+                </Link>
+                <p className="titleP" id='tppp'>{e.title}</p>
                 <p>${e.price}.00</p>
               </div>
             ))}
