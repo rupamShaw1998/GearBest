@@ -5,7 +5,7 @@ import '../styles/ProductDetails.css'
 import {Counter} from '../components/Counter'
 import {Icons} from '../components/Icons'
 import {Link} from 'react-router-dom'
- 
+
 
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])

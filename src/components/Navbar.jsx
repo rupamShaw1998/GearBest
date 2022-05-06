@@ -1,4 +1,6 @@
 import "../styles/Navbar.css";
+import {Link} from 'react-router-dom'
+import {CartPage} from '../components/CartPage'
 
 export const Navbar = () => {
     return (
@@ -98,7 +100,9 @@ export const Navbar = () => {
                         <div id="cart">
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
+                                <Link to={'/cartpage'}>
                                 <div>Cart</div>
+                                </Link>
                             </div>
                             <div className="dropdown">
                                 
