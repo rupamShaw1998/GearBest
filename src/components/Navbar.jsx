@@ -100,7 +100,7 @@ export const Navbar = () => {
                         <div id="cart">
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
-                                <Link to={'/cartpage'}>
+                                <Link to={'/productDetails/cart/:id'}>
                                 <div>Cart</div>
                                 </Link>
                             </div>
