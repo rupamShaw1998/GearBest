@@ -1,7 +1,7 @@
 
 
 .mainDiv {
-    width: 85%;
+    width: 95%;
     border: 1px solid black;
     /* margin-top: 50px; */
     margin: auto;
@@ -21,7 +21,7 @@
 .recommendDiv>div {
     margin-left: 20px;
     /* border: red 1px solid; */
-
+   width: 80%;
 }
 
 .categoryDiv {
@@ -31,7 +31,7 @@
     padding: 24px;
     margin-left: 30px;
     margin-right: 20px;
-    height: 90%;
+    height: 80%;
 }
 
 .categoryDiv:hover {
@@ -64,7 +64,7 @@
 }
 
 .titleP {
-    height: 14%;
+    height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
