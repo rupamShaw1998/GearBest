@@ -10,7 +10,7 @@ import "../styles/collection.css"
 export const LandingPage = () => {
   const [allprod, setAllpro] = useState([]);
   const [coll, setColl] = useState([])
-  const[superDeals,setSuperDeals]=useState([])
+  const [superDeals, setSuperDeals] = useState([])
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const LandingPage = () => {
   const Collection = () => {
     axios.get("http://localhost:7005/collection").then((res) => {
       setColl(res.data);
-    //  console.log(coll);
+      //  console.log(coll);
     });
   };
 
@@ -46,43 +46,45 @@ export const LandingPage = () => {
   return (
     <div className="mainDiv">
       <div className='collectionDiv'>
-        <div className='collection'>
-          <h2>Collection</h2>
+      <div className='collection'>
+      <h2>COLLECTION</h2>
           <div className="collectionData">
 
             {coll.map((e, i) => (
               <div id="collDiv">
-                <img src={e.imgUrl} />
+                <Link to="/catagorys" >
+                  <img src={e.imgUrl} />
+                </Link>
                 <p className="titleP">{e.title}</p>
                 <p>${e.price}.00</p>
-              </div> 
+              </div>
             ))}
           </div>
         </div>
         <div className='superDeal'>
-        <h2>SUPER DEALS</h2>
-        <div className="collectionData">
+          <h2>SUPER DEALS</h2>
+          <div className="collectionData">
 
             {superDeals.map((e, i) => (
               <div id="collDiv">
                 <img src={e.imgUrl} />
                 <p className="titleP">{e.title}</p>
                 <p>${e.price}.00</p>
-              </div> 
+              </div>
             ))}
+
           </div>
         </div>
-        
+
       </div>
       <h2 id='Recomm'>RECOMMENDED FOR YOU</h2>
       <div className="recommendDiv">
         {allprod.map((e) => (
 
           <div className="categoryDiv">
-
-            <img src={e.imgUrl} />
-
-
+            <Link to={`/product/${e._id}`}>
+              <img src={e.imgUrl} />
+            </Link>
             <p className="titleP">{e.title}</p>
             <span>
               <p>${e.price}.00</p>

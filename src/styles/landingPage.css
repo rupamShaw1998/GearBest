@@ -1,8 +1,6 @@
-
-
 .mainDiv {
     width: 95%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* margin-top: 50px; */
     margin: auto;
     display: grid;
@@ -15,13 +13,15 @@
 .recommendDiv {
     display: grid;
     grid-template-columns: repeat(4, 23%);
+    border: 1px solid rgb(232, 213, 213);
+    margin: auto;
 
 }
 
 .recommendDiv>div {
-    margin-left: 20px;
-    /* border: red 1px solid; */
-   width: 80%;
+    margin-left: 18%;
+    /* border: rgb(224, 217, 217) 1px solid; */
+    width: 80%;
 }
 
 .categoryDiv {
@@ -38,14 +38,14 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.categoryDiv>img {
+.categoryDiv img {
     width: 80%;
     height: 50%;
 }
 
 .categoryDiv>span {
     display: flex;
-   
+
 }
 
 .categoryDiv>span>p {
@@ -64,15 +64,14 @@
 }
 
 .titleP {
-    height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
-#Recomm{
+
+#Recomm {
     text-align: left;
     font-size: 22px;
     margin-left: 30px;
     font-weight: 700;
 }
-
-
