@@ -6,6 +6,8 @@
     /* width: 24%; */
     height: 95%;
     margin-top: 10px;
+    text-align: center;
+    padding: 20px;
     /* border: 1px solid black; */
     
 }
@@ -30,4 +32,10 @@ img{
 }
 #collDiv:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* //////////////////////// */
+
+.superDeal>h2{
+    margin-left: 5%;
 }
