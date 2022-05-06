@@ -1,4 +1,3 @@
-
 import {BsFacebook,BsYoutube,BsWhatsapp,BsPinterest,BsMessenger,BsInstagram,BsTwitter,} from "react-icons/bs"
 import '../styles/ProductDetails.css'
 

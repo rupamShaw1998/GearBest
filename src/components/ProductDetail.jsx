@@ -1,4 +1,3 @@
-
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import {useState ,useEffect} from 'react'
@@ -89,4 +88,3 @@ console.log(product)
       </div>
     );
   };
-

@@ -1,6 +1,4 @@
-import {ADD_COUNT} from './action'
-
-
+import {ADD_COUNT} from '../Counter/action'
 const init= {counter : 0}
 
 export const counterReducer=(store = init,{type,payload})=>{
