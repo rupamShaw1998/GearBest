@@ -13,18 +13,14 @@ export const CartItem = () => {
   const cartData = useSelector((store)=>{
    return  store.cartItems.cartItems
   })
-  console.log("cartData",cartData)
+  //console.log("cartData",cartData)
   
   const dispatch = useDispatch();
   // const cartItems = useSelector((store)=>{
   //   return store.cartItem
   // })
   
-//  let total = 0;
-//  cartData.map((item)=>{
-//    total+=item.totalprice
-//  })
-//  console.log(total)
+
   
   const [data,setData] = useState([])
   //console.log(data)
