@@ -2,7 +2,7 @@ import { Cycle } from "./cycle"
 import { Kitchen } from "./kitchen"
 import { Laptop } from "./laptop"
 import { Science } from "./science"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "../styles/landingPage.css"
 import "../styles/collection.css"
 import "../styles/Catagory.css"
@@ -10,12 +10,11 @@ import { Mobile } from "./mobile"
 import { useEffect, useState } from "react";
 
 export const Category = () => {
+    const [price, setPrice] = useState("High");
 
     let [value, setValue] = useState(0)
 
-    // useEffect(()=>{
-    //     setValue(0)
-    // },[])
+
 
     const hand1 = () => {
         setValue(1)
@@ -29,9 +28,14 @@ export const Category = () => {
     const hand4 = () => {
         setValue(4)
     }
-    const handChange=(e)=>{
+    const handChange = (e) => {
         setValue(e.target.value)
-        console.log(e.target.value)
+        //    console.log(e.target.value)
+    }
+
+    const handlePrice = (e) => {
+        setPrice(e.target.value)
+        console.log(price)
     }
     return (
         <div>
@@ -62,15 +66,16 @@ export const Category = () => {
                 <button onClick={hand4}>Rating</button>
                 <button onClick={hand3}>Trending</button>
                 <select>
-                    <option>Price</option>
-                    <option>High To Low</option>
-                    <option>Low To High</option>
+                    <option onchange={handlePrice}>Price</option>
+                    <option value={"Highto low"}>High To Low</option>
+                    <option value={"Low"}>Low To High</option>
                 </select>
             </div>
+
             {
-                value == 1|| value == 0 ? <Cycle /> : ""
+                value == 1 || value == 0 ? <Cycle sort={price} /> : ""
             }
-           
+
             {
                 value == 2 ? <Kitchen /> : ""
             }
