@@ -13,9 +13,9 @@ import { useDispatch } from "react-redux"
 
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
-  const dispatch = useDispatch()
     
-    let {id} = useParams()
+   
+  let {id} = useParams()
  
     useEffect(() => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
@@ -37,6 +37,7 @@ export const ProductDetail = () => {
    localStorage.setItem('addtocart',JSON.stringify(product))
    dispatch(addItemsToCart(product))
   }
+
 
     return (
       <div className="product_details">
@@ -88,10 +89,12 @@ export const ProductDetail = () => {
             <Icons />
             </div>
           <div className="cartbtn">
-            <Link to={`/productDetails/cart/${product._id}`}>
-          <button onClick={setData}>Add To Cart</button>
+            <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
+          <button className="linkbtn"  onClick={setData}>Add To Cart</button>
           </Link>
-          <button onClick={setData}>Buy Now</button>
+          <Link id="linkbutton" to={`/shipping`}>
+          <button className="linkbtn" onClick={setOrder}>Buy Now</button>
+           </Link>
            <button>PayPal</button>
            </div>
            </div>

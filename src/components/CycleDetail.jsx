@@ -9,13 +9,13 @@ import {Icons} from './Icons'
 import {Link} from 'react-router-dom'
  
 
-export const KitchenDetail = () => {
+export const CycleDetail = () => {
   const [product,setProduct] = useState([])
     
     let {id} = useParams()
  
     useEffect(() => {
-      axios.get(`http://localhost:7005/kitchen/${id}`).then(({data})=>{
+      axios.get(`http://localhost:7005/outdoor/${id}`).then(({data})=>{
           setProduct(data)
   })
   },[])
@@ -91,10 +91,10 @@ console.log(product)
             <Icons />
             </div>
           <div className="cartbtn">
-            <Link id="linkbutton"  to={`/productDetails/cart/${product._id}`}>
+            <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
           <button className="linkbtn" onClick={setData}>Add To Cart</button>
           </Link>
-          <Link id="linkbutton"  to={`/shipping`}>
+          <Link id="linkbutton" to={`/shipping`}>
           <button className="linkbtn" onClick={setOrder}>Buy Now</button>
           </Link>
            <button>PayPal</button>
