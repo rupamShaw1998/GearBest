@@ -14,6 +14,8 @@ import { LaptopDetail } from "./components/LaptopDetail";
 import { ScienceDetail } from "./components/ScienceDetail";
 import { MobileDetail } from "./components/MobileDetail";
 import { CycleDetail } from "./components/CycleDetail";
+import {Shipping} from "./components/Shipping"
+import { Confirm } from "./components/Confirm";
 
 function App() {
   
@@ -31,6 +33,8 @@ function App() {
         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
+        <Route path="shipping" element={<Shipping/>}></Route>
+        <Route path="/order" element={<Confirm/>}></Route>
       </Routes>
      <Footer></Footer>
 
