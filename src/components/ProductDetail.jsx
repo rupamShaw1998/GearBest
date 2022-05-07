@@ -7,14 +7,18 @@ import {Icons} from '../components/Icons'
 import {Link} from 'react-router-dom'
 
 
+ 
+
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
+  const dispatch = useDispatch()
     
     let {id} = useParams()
  
     useEffect(() => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
           setProduct(data)
+          
   })
   },[])
 console.log(product)
@@ -27,6 +31,7 @@ console.log(product)
     body:JSON.stringify(product)
   })
    localStorage.setItem('addtocart',JSON.stringify(product))
+
   }
     return (
       <div className="product_details">
