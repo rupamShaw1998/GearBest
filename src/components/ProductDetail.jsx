@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom'
 
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
-  const dispatch = useDispatch()
+ // const dispatch = useDispatch()
     
     let {id} = useParams()
  
