@@ -21,7 +21,7 @@ export const Cycle = () => {
 
             {cycle.map((e) => (
                 <div className="categoryDiv">
-                <Link to={`/LaptopDetail/${e._id}`}>
+                <Link to={`/CycleDetail/${e._id}`}>
                 <img src={e.imgUrl} />
                 </Link>
                 <p className="titleP">{e.title}</p>
