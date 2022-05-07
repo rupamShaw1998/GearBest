@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect,useRef} from "react";
 import "../styles/CoverPic.css";
 
 var covers = [
