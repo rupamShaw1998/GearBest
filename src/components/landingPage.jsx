@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import "../styles/landingPage.css"
 import "../styles/collection.css"
 //import { CollectionCom } from './CollectionComp';
+import { CoverPic } from './CoverPic';
 
 
 export const LandingPage = () => {
@@ -45,7 +46,7 @@ export const LandingPage = () => {
 
   return (
     <div className="mainDiv">
-    
+      <CoverPic />
       <div className='collectionDiv'>
       <div id='skn2'>
       <img src='https://uidesign.gbtcdn.com/GB/image/9534/New+Arrival+450x30+KUU.png'/>
