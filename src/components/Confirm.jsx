@@ -10,6 +10,7 @@ export const Confirm = () => {
 // const shippingInfo =useSelector((store)=>store.shippingInfo);
 
   const [user,setUser]=useState([])
+  const [placeOrder,setplaceOrder] =useState([])
  
     useEffect(()=>{
     axios.get(`http://localhost:7005/addAddress`).then(({data})=>{
@@ -17,6 +18,13 @@ export const Confirm = () => {
         setUser(data);
     });
     },[]);
+
+    // useEffect(()=>{
+    //   axios.get(`http://localhost:7005/placeorder`).then(({data})=>{
+         
+    //       setplaceOrder(data);
+    //   });
+    //   },[]);
 
   return <Fragment>
 <div  style={{width:"100%",height:"900px",backgroundColor:"rgb(247,247,247)"}}>
@@ -39,6 +47,10 @@ export const Confirm = () => {
   <p>Country:{t.Country}, *Pin: {t.PinCode}, *State :{t.State}</p>
  
  </div>
+))}
+
+{placeOrder.map((t)=>(
+  <div style={{width:"100%",height:"300px",border:"1px solid red"}}></div>
 ))}
 
 
