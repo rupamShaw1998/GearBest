@@ -21,7 +21,6 @@ export const ProductDetail = () => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
           setProduct(data)
           
-          
   })
   },[])
   console.log(product)
@@ -38,7 +37,17 @@ export const ProductDetail = () => {
    dispatch(addItemsToCart(product))
   }
 
+  const setOrder=()=>{
+    fetch(`http://localhost:7005/placeorder`,{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(product)
+  })
+   localStorage.setItem('placeorder',JSON.stringify(product))
 
+  }
     return (
       <div className="product_details">
           <div className="flex_container">
