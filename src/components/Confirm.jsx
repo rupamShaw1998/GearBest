@@ -50,7 +50,7 @@ export const Confirm = () => {
 ))}
 <div >
 {placeOrder.map((e)=>(
-       <div style={{display:"flex",justifyContent:"space-around",margin:"2%",border:"1px solid gray",height:"150px",alignItems:"center",padding:"1%"}}>
+       <div style={{display:"flex",margin:"2%",border:"1px solid gray",height:"150px",alignItems:"center",padding:"1%"}}>
            <div><img src={e.imgUrl} alt="" /></div>
       <div style={{display:"flex"}}>
         <p>{e.title}</p>
