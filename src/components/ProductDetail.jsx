@@ -11,9 +11,9 @@ import {Link} from 'react-router-dom'
 
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
- 
     
-    let {id} = useParams()
+   
+  let {id} = useParams()
  
     useEffect(() => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{

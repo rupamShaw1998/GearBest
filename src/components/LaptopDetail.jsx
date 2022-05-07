@@ -9,6 +9,7 @@ import {Icons} from './Icons'
 import {Link} from 'react-router-dom'
  
 
+
 export const LaptopDetail = () => {
   const [product,setProduct] = useState([])
     

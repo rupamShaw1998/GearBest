@@ -11,11 +11,11 @@ export const CoverPic = () => {
             "https://uidesign.gbtcdn.com/GB/image/8823/1190X420.jpg?imbypass=true"
         ];
 
-        useEffect(() => {
-            let interval = setInterval(() => {
-                setImage(image === 4? 0: image+1)
-            }, 2000)
-        }, [image])
+        // useEffect(() => {
+        //     let interval = setInterval(() => {
+        //         setImage(image === 4? 0: image+1)
+        //     }, 2000)
+        // }, [image])
 
     return (
         <div>
