@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios';
 import "../styles/mobile.css"
-
+import { Link } from "react-router-dom"
 
 export const Laptop = () => {
 
@@ -21,7 +21,9 @@ export const Laptop = () => {
 
             {laptop.map((e) => (
                 <div className="categoryDiv">
+                <Link to={`/LaptopDetail/${e._id}`}>
                 <img src={e.imgUrl} />
+                </Link>
                 <p className="titleP">{e.title}</p>
                 <span>
                 <p>${e.price}</p>

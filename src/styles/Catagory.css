@@ -6,10 +6,18 @@
     gap: 12%;
     background-color: black;
     color: white;
+    
+    
 }
+
 #Home{
+    color: white;
+
     margin-left: 15%;
+    text-decoration: none;
+    border-bottom: none;
 }
+
 #Catopt{
     background-color: black;
     color: white;
