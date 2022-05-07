@@ -5,6 +5,8 @@ import '../styles/ProductDetails.css'
 import {Counter} from '../components/Counter'
 import {Icons} from '../components/Icons'
 import {Link} from 'react-router-dom'
+import { addItemsToCart } from "../Redux/Cart/cartaction"
+import { useDispatch } from "react-redux"
 
 
  
@@ -19,9 +21,10 @@ export const ProductDetail = () => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
           setProduct(data)
           
+          
   })
   },[])
-console.log(product)
+  console.log(product)
   const setData=()=>{
     fetch(`http://localhost:7005/addtocart`,{
     method:'POST',
@@ -30,21 +33,12 @@ console.log(product)
     },
     body:JSON.stringify(product)
   })
+  //console.log(product)
    localStorage.setItem('addtocart',JSON.stringify(product))
-
+   dispatch(addItemsToCart(product))
   }
 
-  const setOrder=()=>{
-    fetch(`http://localhost:7005/placeorder`,{
-    method:'POST',
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(product)
-  })
-   localStorage.setItem('placeorder',JSON.stringify(product))
 
-  }
     return (
       <div className="product_details">
           <div className="flex_container">
