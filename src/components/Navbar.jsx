@@ -1,4 +1,6 @@
 import "../styles/Navbar.css";
+import {Link} from 'react-router-dom'
+import {CartPage} from '../components/CartPage'
 
 export const Navbar = () => {
     return (
@@ -72,16 +74,23 @@ export const Navbar = () => {
                         </div>
                         <div id="signIn">                          
                             <div style={{display: "flex"}}>
-                                <img style={{width: "20px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
+                                <img style={{width: "19px", height: "19px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
                                 <div>Sign In</div>
                             </div>
-                            <div className="dropdown">
-
+                            <div className="dropdown" id="sign-box">
+                                <p>Welcome to Gearbest</p>
+                                <button id="yellow-btn">Sign In</button>
+                                <div id="google">
+                                    <div style={{color: "grey"}}>or connect via</div>
+                                    <img src="https://freepngimg.com/download/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="" />
+                                </div>
+                                <p style={{paddingTop: "22px", borderTop: "1px solid rgb(196, 196, 196)"}}>Register on Gearbest: Earn 10 points</p>
+                                <button id="blue-btn">Register</button>
                             </div>
                         </div>
                         <div id="favorites">
                             <div style={{display: "flex"}}>
-                                <img style={{width: "20px"}} src="https://cdn-icons-png.flaticon.com/512/73/73814.png" alt="" />
+                                <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/73/73814.png" alt="" />
                                 <div>Favorites</div>
                             </div>
                             <div className="dropdown">
@@ -90,8 +99,10 @@ export const Navbar = () => {
                         </div>
                         <div id="cart">
                             <div style={{display: "flex"}}>
-                                <img style={{width: "20px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
+                                <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
+                                <Link to={'/productDetails/cart/:id'}>
                                 <div>Cart</div>
+                                </Link>
                             </div>
                             <div className="dropdown">
                                 

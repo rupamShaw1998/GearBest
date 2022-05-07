@@ -12,10 +12,12 @@
 #nav-up-image {
     /* border: 1px solid brown; */
     width: 30%;
+    
 }
 #nav-up-image img {
-    width: 200px;
-    margin: 6.5% 0 0 0%;
+    width: 230px;
+    height: 60px;
+    margin: 25px 0 0 50px;
 }
 #nav-up-right {
     /* border: 1px solid black; */
@@ -103,6 +105,52 @@
     width: 30px;
     height: 30px;
     margin-left: 5px;
+}
+#sign-box {
+    width: 300px;
+    height: 300px;
+}
+#sign-box>p {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+#yellow-btn {
+    background-color: #ffda00;
+    margin-left: 18px;
+    margin-bottom: 20px;
+    padding: 12px 25px;
+    /* font-weight: bold; */
+    width: 266px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#google {
+    display: flex;
+    margin-left: 18px;
+}
+#google>img {
+    width: 42px;
+    height: 42px;
+    margin-left: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+#blue-btn {
+    background-color: #2490fe;
+    color: white;
+    margin-left: 18px;
+    padding: 12px 25px;
+    /* font-weight: bold; */
+    width: 266px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#signIn:hover .dropdown {
+    display: block;
 }
 #nav-down {
     border: 1px solid green;

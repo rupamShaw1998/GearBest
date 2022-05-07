@@ -1,24 +1,22 @@
+
+
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import {useState ,useEffect} from 'react'
 import '../styles/ProductDetails.css'
-import {Counter} from '../components/Counter'
-import {Icons} from '../components/Icons'
+import {Counter} from './Counter'
+import {Icons} from './Icons'
 import {Link} from 'react-router-dom'
-
-
  
 
-export const ProductDetail = () => {
+export const ScienceDetail = () => {
   const [product,setProduct] = useState([])
-  const dispatch = useDispatch()
     
     let {id} = useParams()
  
     useEffect(() => {
-      axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
+      axios.get(`http://localhost:7005/science/${id}`).then(({data})=>{
           setProduct(data)
-          
   })
   },[])
 console.log(product)
@@ -31,7 +29,6 @@ console.log(product)
     body:JSON.stringify(product)
   })
    localStorage.setItem('addtocart',JSON.stringify(product))
-
   }
     return (
       <div className="product_details">
@@ -84,7 +81,7 @@ console.log(product)
             </div>
           <div className="cartbtn">
             <Link to={`/productDetails/cart/${product._id}`}>
-          <button onClick={setData}>Add To Cart</button>
+          <button className="linkbtn" onClick={setData}>Add To Cart</button>
           </Link>
           <button onClick={setData}>Buy Now</button>
            <button>PayPal</button>

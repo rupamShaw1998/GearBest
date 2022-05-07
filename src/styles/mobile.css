@@ -1,30 +1,31 @@
 .categoryDiv {
-    width: 100%;
-    /* border: 1px solid rgb(230, 214, 214); */
-    /* margin-top: 100px; */
-    padding: 24px;
-    margin-left: 30px;
+    width: 90%;
+    /* border: 1px solid rgb(182, 50, 50); */
+    margin-top: 10px;
+    /* padding: 24px; */
+    /* margin-left: 30px; */
     margin-right: 20px;
-    height: 90%;
+    margin-left: -10px;
+   
 }
 .categoryDiv>span>p {
-    padding-left: 15%;
+    padding-left: 12%;
     margin-top: 10px;
     
 }
 .collectionData{
+    
     display: grid;
-    grid-template-columns: repeat(4, 23%);
-
+    grid-template-columns: repeat(4, 20%);
     width: 95%;
-    border: 1px solid black;
-    margin-top: 50px;
+    border: 1px solid rgb(223, 196, 196);
+    margin-top: 30px;
     margin: auto; 
 }
 .categoryDiv:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-.categoryDiv>img {
+.categoryDiv img {
     width: 80%;
     height: 50%;
 }
@@ -33,7 +34,7 @@
    
 }
 .categoryDiv>span>p {
-    padding-left: 5%;
+    /* padding-left: 5%; */
     margin-top: 10px;
 }
 .categoryDiv>span>:nth-child(2) {
@@ -46,7 +47,7 @@
 
 }
 .titleP {
-    height: 14%;
+    height: 12%;
     overflow: hidden;
     text-overflow: ellipsis;
 }

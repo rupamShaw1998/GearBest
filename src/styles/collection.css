@@ -1,33 +1,51 @@
-.collectionData{
+.collectionData {
     display: flex;
     justify-content: space-around;
-}
-#collDiv{
-    /* width: 24%; */
-    height: 95%;
-    margin-top: 10px;
-    /* border: 1px solid black; */
+    /* height: 10%; */
+    /* border: 1px solid rgb(81, 77, 112); */
     
 }
 
-.collectionData {
-    /* border: 1px solid black; */
-  
+#collDiv {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    /* padding: 20px; */
+    /* border: 1px solid rgb(232, 35, 35); */
+    margin-left: -18px;
 }
-#collDiv>img{
-   width: 70%;
-   height: 50%;
-   margin: auto;
+#collDiv:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
 }
-img{
-    height: 100px;
+.collection {
+    /* border: 1px solid rgb(245, 45, 45); */
+  /* margin-left: -5px; */
 }
+
+#collDiv img {
+    width: 90%;
+    height: 60%;
+    margin: auto;
+}
+
+/* img{
+    height: 60%;
+} */
 .collection>h2 {
-   text-align: left;
-   font-size: 25px;
-   margin-left: 30px;
-   font-weight: 500;
+    text-align: left;
+    font-size: 25px;
+    margin-left: 30px;
+    font-weight: 500;
 }
+
 #collDiv:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* //////////////////////// */
+
+.superDeal>h2 {
+    margin-left: 5%;
 }
