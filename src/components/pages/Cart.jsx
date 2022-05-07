@@ -1,10 +1,15 @@
 import { CartItem } from "../Cart/CartItem";
 import { Card } from "../UI/Card";
 import styles from "./Cart.module.css";
+import axios from "axios"
+import {useState,useEffect} from "react"
+import { Link } from "react-router-dom";
 
 
 export const Cart = () => {
+  
   return (
+    
     <div>
       <Card>
         <div className={`${styles.headingContainer} ${styles.InsideDivText}`}>
@@ -79,7 +84,7 @@ export const Cart = () => {
         <hr />
         <div className={styles.paymentoptioncontainer}>
           <div>
-            <a href="">Continue Shopping </a>
+            <Link to={"/"}>Continue Shopping </Link>
           </div>
           <div className={styles.checkout}>
             <img

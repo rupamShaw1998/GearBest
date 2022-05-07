@@ -49,4 +49,12 @@ img{
 } */
 .ContentDiv > p{
     margin-bottom:-18px;
+   
+    
+}
+.ContentDiv > p:first-child{
+    width: 350px;
+    height:47px;
+    overflow: hidden;
+    /* border:1px solid black */
 }
