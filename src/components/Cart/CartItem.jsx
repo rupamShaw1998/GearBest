@@ -20,11 +20,11 @@ export const CartItem = () => {
   //   return store.cartItem
   // })
   
- let total = 0;
- cartData.map((item)=>{
-   total+=item.totalprice
- })
- console.log(total)
+//  let total = 0;
+//  cartData.map((item)=>{
+//    total+=item.totalprice
+//  })
+//  console.log(total)
   
   const [data,setData] = useState([])
   //console.log(data)

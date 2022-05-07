@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux"
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
     
-   
+   const dispatch = useDispatch()
   let {id} = useParams()
  
     useEffect(() => {
