@@ -9,7 +9,7 @@ export const Counter= ()=> {
      
 const dispatch = useDispatch();
 const counter = useSelector((store) => 
- store.counter
+ store.counter.counter
 )
   return (
     <div className='counter'>
