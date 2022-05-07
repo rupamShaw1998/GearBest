@@ -13,7 +13,6 @@ import { KitchenDetail } from "./components/KitchenDetail";
 import { LaptopDetail } from "./components/LaptopDetail";
 import { ScienceDetail } from "./components/ScienceDetail";
 import { MobileDetail } from "./components/MobileDetail";
-import { CoverPic } from "./components/CoverPic";
 import { CycleDetail } from "./components/CycleDetail";
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <CoverPic />
       <Routes>
         <Route path="/catagorys" element={<Category />}></Route>
         <Route path="" element={<LandingPage />}></Route>
