@@ -5,23 +5,26 @@ import '../styles/ProductDetails.css'
 import {Counter} from '../components/Counter'
 import {Icons} from '../components/Icons'
 import {Link} from 'react-router-dom'
+import { addItemsToCart } from "../Redux/Cart/cartaction"
+import { useDispatch } from "react-redux"
 
 
  
 
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
-  const dispatch = useDispatch()
     
-    let {id} = useParams()
+   
+  let {id} = useParams()
  
     useEffect(() => {
       axios.get(`http://localhost:7005/all/${id}`).then(({data})=>{
           setProduct(data)
           
+          
   })
   },[])
-console.log(product)
+  console.log(product)
   const setData=()=>{
     fetch(`http://localhost:7005/addtocart`,{
     method:'POST',
@@ -30,9 +33,12 @@ console.log(product)
     },
     body:JSON.stringify(product)
   })
+  //console.log(product)
    localStorage.setItem('addtocart',JSON.stringify(product))
-
+   dispatch(addItemsToCart(product))
   }
+
+
     return (
       <div className="product_details">
           <div className="flex_container">
@@ -83,10 +89,12 @@ console.log(product)
             <Icons />
             </div>
           <div className="cartbtn">
-            <Link to={`/productDetails/cart/${product._id}`}>
-          <button onClick={setData}>Add To Cart</button>
+            <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
+          <button className="linkbtn"  onClick={setData}>Add To Cart</button>
           </Link>
-          <button onClick={setData}>Buy Now</button>
+          <Link id="linkbutton" to={`/shipping`}>
+          <button className="linkbtn" onClick={setOrder}>Buy Now</button>
+           </Link>
            <button>PayPal</button>
            </div>
            </div>
