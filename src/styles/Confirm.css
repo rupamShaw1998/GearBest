@@ -1,0 +1,12 @@
+.container{
+    /* display:flex; */
+    width:80%;
+   padding-left:10px;
+    margin:auto;
+    background-color:white;
+    border: 1px solid gray;
+
+}
+.container>h2{
+    margin-right:1% ;
+}
