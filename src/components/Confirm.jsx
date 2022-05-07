@@ -11,23 +11,23 @@ export const Confirm = () => {
 
   const [user,setUser]=useState([])
   const [placeOrder,setplaceOrder] =useState([])
- 
-    useEffect(()=>{
+  useEffect(()=>{
     axios.get(`http://localhost:7005/addAddress`).then(({data})=>{
-        console.log("dbdata",data)
-        setUser(data);
+      console.log("dbdata",data)
+      setUser(data);
+    });
+  },[]);
+  
+  useEffect(()=>{
+    axios.get(`http://localhost:7005/placeorder`).then(({data})=>{
+       console.log("placeorderdata",data)
+        setplaceOrder(data);
     });
     },[]);
-
-    // useEffect(()=>{
-    //   axios.get(`http://localhost:7005/placeorder`).then(({data})=>{
-         
-    //       setplaceOrder(data);
-    //   });
-    //   },[]);
+ 
 
   return <Fragment>
-<div  style={{width:"100%",height:"900px",backgroundColor:"rgb(247,247,247)"}}>
+<div  style={{width:"100%",backgroundColor:"rgb(247,247,247)"}}>
 
 <div style={{width:"100%",height:"100px",backgroundColor:"white",marginBottom:"10px"}}><img style={{height:"60px",width:"190px",marginLeft:"25%",marginTop:"0.5%"}}src ="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"></img></div>
 <CheckoutSteps activeStep={1}/>
@@ -48,11 +48,20 @@ export const Confirm = () => {
  
  </div>
 ))}
+<div >
+{placeOrder.map((e)=>(
+       <div style={{display:"flex",justifyContent:"space-around",margin:"2%",border:"1px solid gray",height:"150px",alignItems:"center",padding:"1%"}}>
+           <div><img src={e.imgUrl} alt="" /></div>
+      <div style={{display:"flex"}}>
+        <p>{e.title}</p>
+      </div>
+      <div><p>{e.price}</p></div>
+      
+       
+        </div>
+        ))}
 
-{placeOrder.map((t)=>(
-  <div style={{width:"100%",height:"300px",border:"1px solid red"}}></div>
-))}
-
+</div>
 
 </div>
 </Fragment>
