@@ -13,7 +13,7 @@ export const Cycle = () => {
     const setData = () => {
         axios.get("http://localhost:7005/outdoor").then((res) => {
             setCycle(res.data);
-            console.log(mobile);
+          //  console.log(mobile);
         });
     };
     return (
