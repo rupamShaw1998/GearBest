@@ -31,6 +31,18 @@ console.log(product)
   })
    localStorage.setItem('addtocart',JSON.stringify(product))
   }
+
+  const setOrder=()=>{
+    fetch(`http://localhost:7005/placeorder`,{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(product)
+  })
+   localStorage.setItem('placeorder',JSON.stringify(product))
+
+  }
     return (
       <div className="product_details">
           <div className="flex_container">
@@ -81,10 +93,12 @@ console.log(product)
             <Icons />
             </div>
           <div className="cartbtn">
-            <Link to={`/productDetails/cart/${product._id}`}>
+            <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
           <button className="linkbtn" onClick={setData}>Add To Cart</button>
           </Link>
-          <button onClick={setData}>Buy Now</button>
+          <Link id="linkbutton" to={`/shipping`}>
+          <button className="linkbtn" onClick={setOrder}>Buy Now</button>
+          </Link>
            <button>PayPal</button>
            </div>
            </div>
