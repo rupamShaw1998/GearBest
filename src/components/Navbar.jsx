@@ -100,23 +100,40 @@ export const Navbar = () => {
                         <div id="cart">
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
-                                <Link to={'/productDetails/cart/:id'}>
+                                <Link to={'/productDetails/cart/:id'} style={{textDecoration: "none", color: "black"}}>
                                 <div>Cart</div>
                                 </Link>
                             </div>
-                            <div className="dropdown">
+                            {/* <div className="dropdown">
                                 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
             </div>
             <div id="nav-down">
-                <div>Category</div>
-                <div>COUPON</div>
-                <div>SUPER DEALS</div>
-                <div>APP ONLY</div>
-                <div>NEW ARRIVALS</div>
+                <div id="category">
+                    <p style={{marginTop: "5px", fontWeight: "bold"}}>Category</p>
+                    <div className="languages" style={{position: "absolute", opacity: "0.8", backgroundColor: "white", color: "black", margin: "-6px 0 0 -70px", width: "210px", height: "500px"}}>
+                        <p style={{marginLeft: "5px"}}>Consumer Electronics</p>
+                        <p style={{marginLeft: "5px"}}>Industrial & Scientific</p>
+                        <p style={{marginLeft: "5px"}}>Cell Phones & Accessories</p>
+                        <p style={{marginLeft: "5px"}}>Appliances</p>
+                        <p style={{marginLeft: "5px"}}>Outdoors, Fitness & Sports</p>
+                        <p style={{marginLeft: "5px"}}>Computer, Tablets & Office</p>
+                        <p style={{marginLeft: "5px"}}>Health & Personal Care</p>
+                        <p style={{marginLeft: "5px"}}>Home Improvement & Tools</p>
+                        <p style={{marginLeft: "5px"}}>Drones, Toys & Hobbies</p>
+                        <p style={{marginLeft: "5px"}}>Home & Garden</p>
+                        <p style={{marginLeft: "5px"}}>Motor & Car Electronics</p>
+                        <p style={{marginLeft: "5px"}}>Watches & Jewelry</p>
+                        <p style={{marginLeft: "5px"}}>Gearbest Promotion</p>
+                    </div>
+                </div>
+                <div style={{fontWeight: "bold"}}>COUPON</div>
+                <div style={{fontWeight: "bold"}}>SUPER DEALS</div>
+                <div style={{fontWeight: "bold"}}>APP ONLY</div>
+                <div style={{fontWeight: "bold"}}>NEW ARRIVALS</div>
             </div>
         </div>
     );
