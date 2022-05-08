@@ -4,16 +4,23 @@ import { useEffect, useState } from "react";
 import axios from "axios"
 import {Link} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
+import { addItemsToCart } from "../../Redux/Cart/cartaction";
+import { useCallback } from "react";
 
 export const CartItem = () => {
-  const [Quantity, setQuantity] = useState(0);
+  // const [Quantity, setQuantity] = useState(1);
+  
+  const cartData = useSelector((store)=>{
+   return  store.cartItems.cartItems
+  })
+  //console.log("cartData",cartData)
   
   const dispatch = useDispatch();
-  // const cartData = useSelector((store)=>{
-  //   return store.cart.cart
+  // const cartItems = useSelector((store)=>{
+  //   return store.cartItem
   // })
+  
 
-  // console.log(cartData)
   
   const [data,setData] = useState([])
   //console.log(data)
@@ -24,27 +31,16 @@ export const CartItem = () => {
     })
   },[])
 
-  // const [data,setdata] = useState([]);
-  // console.log(data)
-  // useEffect(() => {
-  //   axios.get("http://localhost:7005/kitchen").then(({data})=>{
-  //     setdata(data)
-  //   })
-  // },[])
+  
   const  addQuantityHandler = (item,e)=>{
-     console.log(item.price,e)
-     setQuantity((prev)=>{
-       return prev+1
-     })
+   dispatch(addItemsToCart(item))
+     
   }
-  const  removeQuantityHandler = (item,e)=>{
-    console.log(item._id,e)
-    setQuantity((prev)=>{
-      return prev-1
-    })
- }
+//   const  removeQuantityHandler = (item,e)=>{
+  
+//  }
   return (
-   <div>{data.map((e)=>{
+   <div>{cartData.map((e)=>{
      
      return <Card>
      <div className={`${styles.Container} ${styles.border}`}>
@@ -73,11 +69,11 @@ export const CartItem = () => {
          <div className={styles.increDecreButton}>
            <button
              className={styles.buttonIncrement}
-             onClick={removeQuantityHandler.bind(e._id,e)}
+             onClick={""}
            >
              -
            </button>
-           <span className={styles.buttonIncrement}>{Quantity}</span>
+           <span className={styles.buttonIncrement}>{e.quantity}</span>
            <button
              className={styles.buttonIncrement}
              onClick={addQuantityHandler.bind(e._id,e)}
@@ -86,7 +82,7 @@ export const CartItem = () => {
            </button>
          </div>
          <div>
-           <p className={styles.subtotal}>{`$${e.price}`}</p>
+           <p className={styles.subtotal}>{`$${e.totalprice}`}</p>
          </div>
          <div>
            <div>

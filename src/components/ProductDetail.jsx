@@ -5,6 +5,8 @@ import '../styles/ProductDetails.css'
 import {Counter} from '../components/Counter'
 import {Icons} from '../components/Icons'
 import {Link} from 'react-router-dom'
+import { addItemsToCart } from "../Redux/Cart/cartaction"
+import { useDispatch } from "react-redux"
 
 
  
@@ -12,7 +14,7 @@ import {Link} from 'react-router-dom'
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
     
-   
+   const dispatch = useDispatch()
   let {id} = useParams()
  
     useEffect(() => {
@@ -21,7 +23,7 @@ export const ProductDetail = () => {
           
   })
   },[])
-console.log(product)
+  console.log(product)
   const setData=()=>{
     fetch(`http://localhost:7005/addtocart`,{
     method:'POST',
@@ -30,8 +32,9 @@ console.log(product)
     },
     body:JSON.stringify(product)
   })
+  //console.log(product)
    localStorage.setItem('addtocart',JSON.stringify(product))
-
+   dispatch(addItemsToCart(product))
   }
 
   const setOrder=()=>{

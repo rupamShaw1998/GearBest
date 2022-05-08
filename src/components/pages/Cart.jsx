@@ -4,10 +4,33 @@ import styles from "./Cart.module.css";
 import axios from "axios"
 import {useState,useEffect} from "react"
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 
 export const Cart = () => {
-  
+  const setOrder=()=>{
+    fetch(`http://localhost:7005/placeorder`,{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(product)
+  })
+   localStorage.setItem('placeorder',JSON.stringify(product))
+
+  }
+
+  const cartData = useSelector((store)=>{
+    return  store.cartItems.cartItems
+   })
+   console.log("cartData",cartData)
+   
+
+   let total = 0;
+ cartData.map((item)=>{
+   total+=item.totalprice
+ })
+ console.log(total)
   return (
     
     <div>
@@ -65,7 +88,7 @@ export const Cart = () => {
               <tbody>
                 <tr>
                   <td>Your subtotal </td>
-                  <td>:$115.16</td>
+                  <td>{`$${total}`}</td>
                 </tr>
                 <tr>
                   <td>Promotion</td>
@@ -74,7 +97,7 @@ export const Cart = () => {
                 <tr>
                   <td>Total</td>
                   <td>
-                    <h2 className={styles.TotalText}>$115.16</h2>
+                    <h2 className={styles.TotalText}>{`$${total}`}</h2>
                   </td>
                 </tr>
               </tbody>
@@ -97,7 +120,7 @@ export const Cart = () => {
               alt=""
             />
             <span>Or</span>
-            <button className={styles.checkoutButton}>Checkout</button>
+            <Link to={"/shipping"} ><button className={styles.checkoutButton} onClick={setOrder}>Checkout</button></Link>
           </div>
         </div>
         </div>

@@ -14,8 +14,6 @@ import { LaptopDetail } from "./components/LaptopDetail";
 import { ScienceDetail } from "./components/ScienceDetail";
 import { MobileDetail } from "./components/MobileDetail";
 import { CycleDetail } from "./components/CycleDetail";
-import { SignInPage } from './components/auth';
-import { AllRoutes } from './components/allRoutes';
 
 
 function App() {
@@ -23,9 +21,7 @@ function App() {
 
   return (
     <div className="App">
-     
-    {sig? <SignInPage  />:  <AllRoutes/> }
-   
+
     </div>
   );
 }

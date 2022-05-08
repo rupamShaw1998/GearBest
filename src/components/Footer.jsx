@@ -122,12 +122,18 @@ export const Footer = () => {
     <>
     <footer className='footer'>
    <div className='firstdiv'>
-       <h4>Popular Searches:
+       <div style={{width:"11%"}}>
+       <h3>Popular Searches: </h3>
+
+       </div>
+       <div style={{textAlign:"center",paddingTop:"1%"}}>
           {popular.map((e)=>(
               <p id='footertext' key={e.id}>{e.title}</p>
           ))}
 
-        </h4>
+       </div>
+
+       
    </div>
    <div className='seconddiv'>
       <div className='div1'>
@@ -281,7 +287,7 @@ export const Footer = () => {
 
      </div>
      <div style={{background:"black",width:"100%",height:"4%",marginBottom:"0"}}>
-         <p style={{color:"white",alignItems:"center",padding:"20px 0 "}}>Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</p>
+         <p style={{color:"white",textAlign:"center",padding:"20px 0 "}}>Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</p>
      </div>
 
     </footer>
