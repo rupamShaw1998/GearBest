@@ -10,6 +10,9 @@ export const Confirm = () => {
 
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
+
+  const [apply,setApply]=useState("");
+
   useEffect(() => {
     axios.get(`http://localhost:7005/addAddress`).then(({ data }) => {
       console.log("dbdata", data);
@@ -26,8 +29,9 @@ export const Confirm = () => {
 
 
   let total = 0;
+ 
  placeOrder.map((item)=>{
-   total+=item.price
+   total+=(item.price)
  })
  console.log("total",total)
 
@@ -75,11 +79,23 @@ export const Confirm = () => {
         </div>
 
         <div className="mainDivOfOrderTotal">
-          <div style={{width:"80%"}}></div>
+          <div style={{width:"80%"}}>
+          <input style={{backgroundColor:"black",filter: "grayscale(1)",marginBottom:"2%"}} type="radio" id="html" name="fav_language" value="HTML"/>
+          <label for="html">Apply Coupon</label>
+          <br></br>
+          <input  style={{width:"40%",padding:"1%",fontSize:"24px",border:"none"}}type="text" placeholder="Enter Coupon Code" />
+          <button style={{padding:"1%",fontSize:"24px",backgroundColor:"#ffda00",border:"none"}}>Apply</button>
+        <ul type = "circle">
+         <li >Use G Points?</li>
+         <p>Every order you place with us is completely safe and secure!</p>
+         <li>Order Requirement:Dropshipping</li>
+      </ul>
+
+          </div>
           <div style={{width:"20%",}}>
             <div className="itemtotal" >
             <p >Item SubTotal </p>
-            <p > ${total}.00</p>
+            <p > ${total}</p>
 
             </div>
 
@@ -93,6 +109,8 @@ export const Confirm = () => {
               <h3>Grand Total</h3>
               <h1 style={{color:"rgb(211,0,129)"}}>${grand}</h1>
             </div>
+
+            <button style={{width:"100%",fontSize:"26px",padding:"5px",backgroundColor:"#ffda00",border:"none"}}>PLACE ORDER</button>
           </div>
 
 
