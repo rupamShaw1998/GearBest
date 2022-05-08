@@ -7,7 +7,7 @@ export const Navbar = () => {
         <div id="nav">
             <div id="nav-up">
                 <div id="nav-up-image">
-                    <a href="https://www.gearbest.com/">
+                    <a href="http://localhost:3000">
                         <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" />
                     </a>
                 </div>
@@ -75,7 +75,7 @@ export const Navbar = () => {
                         <div id="signIn">                          
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
-                                <div>Sign In</div>
+                               <div>Sign In</div>
                             </div>
                             <div className="dropdown" id="sign-box">
                                 <p>Welcome to Gearbest</p>
@@ -85,7 +85,7 @@ export const Navbar = () => {
                                     <img src="https://freepngimg.com/download/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="" />
                                 </div>
                                 <p style={{paddingTop: "22px", borderTop: "1px solid rgb(196, 196, 196)"}}>Register on Gearbest: Earn 10 points</p>
-                                <button id="blue-btn">Register</button>
+                                <Link to={"/auth"}><button id="blue-btn">Register</button></Link>
                             </div>
                         </div>
                         <div id="favorites">
