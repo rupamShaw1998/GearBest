@@ -114,7 +114,7 @@ export const Navbar = () => {
             <div id="nav-down">
                 <div id="category">
                     <p style={{marginTop: "5px", fontWeight: "bold"}}>Category</p>
-                    <div className="languages" style={{position: "absolute", opacity: "0.8", backgroundColor: "white", color: "black", margin: "-6px 0 0 -70px", width: "210px", height: "500px"}}>
+                    <div className="dropdown languages" style={{position: "absolute", opacity: "0.8", backgroundColor: "white", color: "black", margin: "-6px 0 0 -70px", width: "210px", height: "500px"}}>
                         <p style={{marginLeft: "5px"}}>Consumer Electronics</p>
                         <p style={{marginLeft: "5px"}}>Industrial & Scientific</p>
                         <p style={{marginLeft: "5px"}}>Cell Phones & Accessories</p>
