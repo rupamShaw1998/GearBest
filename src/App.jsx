@@ -14,28 +14,35 @@ import { LaptopDetail } from "./components/LaptopDetail";
 import { ScienceDetail } from "./components/ScienceDetail";
 import { MobileDetail } from "./components/MobileDetail";
 import { CycleDetail } from "./components/CycleDetail";
+import { SignInPage } from './components/auth';
+import { AllRoutes } from './components/allRoutes';
+
 
 function App() {
-  
+  const [sig,setSig]=useState(false)
+
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/catagorys" element={<Category />}></Route>
-        <Route path="" element={<LandingPage />}></Route>
-        <Route path="/product/:id" element={<ProductDetail />}></Route>
-        <Route path="/productDetails/cart/:id" element={<Cart />}></Route>
-        <Route path='/cartPage' element={<CartPage />}></Route>
-        <Route path='/KitchenDetail/:id' element={<KitchenDetail />}></Route>
-        <Route path='/LaptopDetail/:id' element={<LaptopDetail />}></Route>
-        <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
-        <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
-        <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
-      </Routes>
-     <Footer></Footer>
-
+     
+    {sig? <SignInPage  />:  <AllRoutes/> }
+   
     </div>
   );
 }
 
 export default App;
+
+//<Navbar />
+// <Routes>
+//         <Route path="/catagorys" element={<Category />}></Route>
+//         <Route path="" element={<LandingPage />}></Route>
+//         <Route path="/product/:id" element={<ProductDetail />}></Route>
+//         <Route path="/productDetails/cart/:id" element={<Cart />}></Route>
+//         <Route path='/cartPage' element={<CartPage />}></Route>
+//         <Route path='/KitchenDetail/:id' element={<KitchenDetail />}></Route>
+//         <Route path='/LaptopDetail/:id' element={<LaptopDetail />}></Route>
+//         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
+//         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
+//         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
+//       </Routes>
+//      <Footer></Footer>
