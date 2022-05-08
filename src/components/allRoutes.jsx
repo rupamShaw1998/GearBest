@@ -18,7 +18,8 @@ import { CycleDetail } from "./CycleDetail";
 import { Navbar } from "./Navbar";
 import { Category } from "./allCatagory";
 import { SignInPage } from "./auth";
-
+import {Shipping} from "./Shipping"
+import {Confirm} from "./Confirm"
 export const AllRoutes=()=>{
 
     return(
@@ -38,6 +39,8 @@ export const AllRoutes=()=>{
         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
+        <Route path="/shipping" element={<Shipping/>}></Route>
+        <Route path="/order" element={<Confirm/>}></Route>
       </Routes>
      <Footer></Footer>
         
