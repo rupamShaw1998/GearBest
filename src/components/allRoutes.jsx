@@ -40,6 +40,9 @@ export const AllRoutes=()=>{
         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
+        <Route path="/shipping" element={<Shipping/>}></Route>
+        <Route path="/order" element={<Confirm/>}></Route>
+
 
       </Routes>
      <Footer></Footer>
