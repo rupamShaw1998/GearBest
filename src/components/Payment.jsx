@@ -47,7 +47,7 @@ export const Payment = () => {
            
 
            </div>
-           <div style={{width:"30%",marginLeft:"2%",marginTop:"3%",padding:"2%",border:"1px solid gray"}}>
+           <div style={{width:"30%",marginLeft:"2%",marginTop:"3%",padding:"2%",border:"1px solid gray",marginBottom:"10%"}}>
 
           <div style={{borderBottom:"1px solid gray"}}>
               Your Bill
