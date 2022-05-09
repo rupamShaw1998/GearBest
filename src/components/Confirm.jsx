@@ -10,7 +10,6 @@ import "../styles/CheckoutSteps.css"
 export const Confirm = () => {
    var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);
 
-//console.log("shippingInfo",shippingInfo)
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
 
@@ -20,7 +19,6 @@ const[sum,grandSum] =useState(0)
 
   const [text,setText]=useState("")
 
-  
   useEffect(() => {
     axios.get(`http://localhost:7005/addAddress`).then(({ data }) => {
       console.log("dbdata", data);
@@ -56,8 +54,6 @@ const[sum,grandSum] =useState(0)
    totalSum=(total-coupon)
    
    grandSum(totalSum);
-
-
   
   }
   else if(text=="Masai30"&&count>=1){
@@ -65,7 +61,6 @@ const[sum,grandSum] =useState(0)
     alert("Coupon Code can only be applied once")
     
   } 
-  
   else{
     alert("Coupon Code Invalid");
   }
@@ -74,9 +69,6 @@ const[sum,grandSum] =useState(0)
 const amount=()=>{
   localStorage.setItem("amount",JSON.stringify(sum))
 }
-
-
-
 
   return (
     <Fragment>
@@ -108,17 +100,12 @@ const amount=()=>{
           </div>
         ))} */}
 
-
-
-        
           <div className="container">
             <h3 style={{ display: "flex" }}>
 
            <div style={{marginRight:"5px"}}> {shippingInfo.firstName}</div> <div> {shippingInfo.lastName}{" "}</div>
               <div className="default">Default</div>
             </h3>
-
-          
           <div>
             <p>
               {shippingInfo.phoneNo} / {shippingInfo.email}
