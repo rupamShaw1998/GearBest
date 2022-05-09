@@ -9,11 +9,7 @@ import "../styles/CheckoutSteps.css"
 
 export const Confirm = () => {
 
-  const shippingInfo = useSelector((store) => store.shippingInfo);
-  console.log("shippingInfo", shippingInfo)
-
- 
-
+  const shippingInfo = useSelector((store) => store.shippingInfo.shippingInfo);
 
 
   const [user, setUser] = useState([]);
@@ -50,7 +46,7 @@ export const Confirm = () => {
   let coupon;
 
   let grand = total + 11
-  console.log("grand", grand)
+  
   let totalSum;
   function handleAdd() {
 
@@ -73,30 +69,6 @@ export const Confirm = () => {
     else {
       alert("Coupon Code Invalid");
     }
-
-  let grand=total+11
-  console.log("grand",grand)
-   let totalSum;
-  function handleAdd(){
-    
-  if(text=="Masai30" && count==0){
-   coupon =Math.ceil(0.3*total)
-   
- 
-   setHandle(true)
-   totalSum=(total-coupon)
-   
-   grandSum(totalSum);
-  
-  }
-  else if(text=="Masai30"&&count>=1){
-    count++;
-    alert("Coupon Code can only be applied once")
-    
-  } 
-  else{
-    alert("Coupon Code Invalid");
-
   }
 
 const amount=()=>{
@@ -133,11 +105,6 @@ const amount=()=>{
         ))} */}
 
 
-
-
-
-
-
         <div className="container">
           <h3 style={{ display: "flex" }}>
             {shippingInfo.firstName} {shippingInfo.lastName}{" "}
@@ -157,27 +124,7 @@ const amount=()=>{
 
         
 
-          <div className="container">
-            <h3 style={{ display: "flex" }}>
-
-           <div style={{marginRight:"5px"}}> {shippingInfo.firstName}</div> <div> {shippingInfo.lastName}{" "}</div>
-              <div className="default">Default</div>
-            </h3>
-          <div>
-            <p>
-              {shippingInfo.phoneNo} / {shippingInfo.email}
-            </p>
-            <p>{shippingInfo.address}</p>
-           
-            <p>
-              Country:{shippingInfo.country}, *Pin: {shippingInfo.pinCode}, *State :{shippingInfo.state}
-            </p>
-
-          </div>
-
-           
-          </div>
-
+        
           <div style={{width:"90%",display:"flex",margin:"auto",backgroundColor:"white",border:"1px solid gray",padding:"3px",paddingLeft:"15px",paddingRight:"15px",marginBottom:"20px"}}>
             <p style={{width:"90%"}}>Selected Item(s)</p>
             <p>Subtotal</p>
@@ -240,7 +187,7 @@ const amount=()=>{
             <Link to="/payment">
 
 
-              <button className="placeOrder">PLACE ORDER</button>
+             
 
             <button onClick={amount} className="placeOrder">PLACE ORDER</button>
 
