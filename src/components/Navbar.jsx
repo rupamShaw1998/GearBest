@@ -7,7 +7,7 @@ export const Navbar = () => {
         <div id="nav">
             <div id="nav-up">
                 <div id="nav-up-image">
-                    <a href="https://www.gearbest.com/">
+                    <a href="http://localhost:3000">
                         <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" />
                     </a>
                 </div>
@@ -75,7 +75,7 @@ export const Navbar = () => {
                         <div id="signIn">                          
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
-                                <div>Sign In</div>
+                               <div>Sign In</div>
                             </div>
                             <div className="dropdown" id="sign-box">
                                 <p>Welcome to Gearbest</p>
@@ -85,7 +85,7 @@ export const Navbar = () => {
                                     <img src="https://freepngimg.com/download/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="" />
                                 </div>
                                 <p style={{paddingTop: "22px", borderTop: "1px solid rgb(196, 196, 196)"}}>Register on Gearbest: Earn 10 points</p>
-                                <button id="blue-btn">Register</button>
+                                <Link to={"/auth"}><button id="blue-btn">Register</button></Link>
                             </div>
                         </div>
                         <div id="favorites">
@@ -100,23 +100,40 @@ export const Navbar = () => {
                         <div id="cart">
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
-                                <Link to={'/productDetails/cart/:id'}>
+                                <Link to={'/productDetails/cart/:id'} style={{textDecoration: "none", color: "black"}}>
                                 <div>Cart</div>
                                 </Link>
                             </div>
-                            <div className="dropdown">
+                            {/* <div className="dropdown">
                                 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
             </div>
             <div id="nav-down">
-                <div>Category</div>
-                <div>COUPON</div>
-                <div>SUPER DEALS</div>
-                <div>APP ONLY</div>
-                <div>NEW ARRIVALS</div>
+                <div id="category">
+                    <p style={{marginTop: "5px", fontWeight: "bold"}}>Category</p>
+                    <div className="dropdown languages" style={{position: "absolute", opacity: "0.8", backgroundColor: "white", color: "black", margin: "-6px 0 0 -70px", width: "210px", height: "500px"}}>
+                        <p style={{marginLeft: "5px"}}>Consumer Electronics</p>
+                        <p style={{marginLeft: "5px"}}>Industrial & Scientific</p>
+                        <p style={{marginLeft: "5px"}}>Cell Phones & Accessories</p>
+                        <p style={{marginLeft: "5px"}}>Appliances</p>
+                        <p style={{marginLeft: "5px"}}>Outdoors, Fitness & Sports</p>
+                        <p style={{marginLeft: "5px"}}>Computer, Tablets & Office</p>
+                        <p style={{marginLeft: "5px"}}>Health & Personal Care</p>
+                        <p style={{marginLeft: "5px"}}>Home Improvement & Tools</p>
+                        <p style={{marginLeft: "5px"}}>Drones, Toys & Hobbies</p>
+                        <p style={{marginLeft: "5px"}}>Home & Garden</p>
+                        <p style={{marginLeft: "5px"}}>Motor & Car Electronics</p>
+                        <p style={{marginLeft: "5px"}}>Watches & Jewelry</p>
+                        <p style={{marginLeft: "5px"}}>Gearbest Promotion</p>
+                    </div>
+                </div>
+                <div style={{fontWeight: "bold"}}>COUPON</div>
+                <div style={{fontWeight: "bold"}}>SUPER DEALS</div>
+                <div style={{fontWeight: "bold"}}>APP ONLY</div>
+                <div style={{fontWeight: "bold"}}>NEW ARRIVALS</div>
             </div>
         </div>
     );

@@ -18,18 +18,20 @@ import { CycleDetail } from "./CycleDetail";
 import { Navbar } from "./Navbar";
 import { Category } from "./allCatagory";
 import { SignInPage } from "./auth";
-
+import {Shipping} from "./Shipping"
+import {Confirm} from "./Confirm"
 export const AllRoutes=()=>{
 
     return(
         <div>
         
         
-<Navbar />
+
+
 <Routes>
-<Route path="/auth" element={<SignInPage/>}></Route>
+        
         <Route path="/catagorys" element={<Category />}></Route>
-        <Route path="" element={<LandingPage />}></Route>
+        
         <Route path="/product/:id" element={<ProductDetail />}></Route>
         <Route path="/productDetails/cart/:id" element={<Cart />}></Route>
         <Route path='/cartPage' element={<CartPage />}></Route>
@@ -38,6 +40,10 @@ export const AllRoutes=()=>{
         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
+        <Route path="/shipping" element={<Shipping/>}></Route>
+        <Route path="/order" element={<Confirm/>}></Route>
+
+
       </Routes>
      <Footer></Footer>
         

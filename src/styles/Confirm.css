@@ -69,3 +69,30 @@
     justify-content:space-around;
     line-height: 10px;
 }
+.Coupon{
+    background-color:black;
+    filter: grayscale(1);
+    margin-bottom:2%;
+}
+.enterCoupon{
+    width:40%;
+    padding:1%;
+    font-size:24px;
+    border:none
+}
+.Apply{
+    padding:1%;
+    font-size:24px;
+    background-color:#ffda00;
+    border:none
+}
+.Apply:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.placeOrder{
+    width:100%;
+    font-size:26px;
+    padding:5px;
+    background-color:#ffda00;
+    border:none
+}

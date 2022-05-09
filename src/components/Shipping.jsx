@@ -71,7 +71,7 @@ const payload={
    //  localStorage.setItem("shippingInfo",JSON.stringify({address,city,state,country,pinCode,phoneNo}))
       console.log({address,city,state,country,pinCode,phoneNo})
 
-       dispatch(saveShippingInfo({address,city,state,country,pinCode,phoneNo})
+       dispatch(saveShippingInfo({firstName,lastName,lastName,address,city,state,country,pinCode,phoneNo})
      );
 
     

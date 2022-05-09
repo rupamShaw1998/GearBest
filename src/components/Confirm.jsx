@@ -4,19 +4,27 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import "../styles/Confirm.css";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-export const Confirm = () => {
-  // const shippingInfo =useSelector((store)=>store.shippingInfo);
+import { Link, useParams } from "react-router-dom";
 
+export const Confirm = () => {
+   const shippingInfo =useSelector((store)=>store.shippingInfo);
+console.log("shippingInfo",shippingInfo)
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
+
+const[handle,setHandle] =useState(false)
+
+const[sum,grandSum] =useState(0)
+
+  const [text,setText]=useState("")
+
+  
   useEffect(() => {
     axios.get(`http://localhost:7005/addAddress`).then(({ data }) => {
       console.log("dbdata", data);
       setUser(data);
     });
   }, []);
-
   useEffect(() => {
     axios.get(`http://localhost:7005/placeorder`).then(({ data }) => {
       console.log("placeorderdata", data);
@@ -24,14 +32,45 @@ export const Confirm = () => {
     });
   }, []);
 
+            let total=0;
+    
+            placeOrder.map((item)=>{
+            total+=(item.price)
+      }) 
+ 
+  let count =0;
+  
+  let coupon;
+  let grand=total+11
+  console.log("grand",grand)
+   let totalSum;
+  function handleAdd(){
+    
+  if(text=="Masai30" && count==0){
+   coupon =Math.ceil(0.3*total)
+   
+ 
+   setHandle(true)
+   totalSum=(total-coupon)
+   grandSum(totalSum);
 
-  let total = 0;
- placeOrder.map((item)=>{
-   total+=item.price
- })
- console.log("total",total)
+  
+  }
+  else if(text=="Masai30"&&count>=1){
+    count++;
+    alert("Coupon Code can only be applied once")
+    
+  } 
+  
+  else{
+    alert("Coupon Code Invalid");
+  }
+}
 
- let grand=total-11;
+
+console.log("totalSum",sum)
+
+
   return (
     <Fragment>
       <div className="mainConatiner">
@@ -41,7 +80,7 @@ export const Confirm = () => {
         <CheckoutSteps activeStep={1} />
         <h2 style={{ marginLeft: "10%" }}>Shipping Information</h2>
 
-        {user.map((t) => (
+        {/* {user.map((t) => (
           <div className="container">
             <h3 style={{ display: "flex" }}>
               {t.First_Name} {t.Last_Name}{" "}
@@ -57,7 +96,27 @@ export const Confirm = () => {
               Country:{t.Country}, *Pin: {t.PinCode}, *State :{t.State}
             </p>
           </div>
-        ))}
+        ))} */}
+
+
+
+
+          <div className="container">
+            <h3 style={{ display: "flex" }}>
+              {shippingInfo.firstName} {shippingInfo.lastName}{" "}
+              <div className="default">Default</div>
+            </h3>
+            <p>
+              {shippingInfo.phoneNo} / {shippingInfo.email}
+            </p>
+
+            <p>{shippingInfo.address}</p>
+
+            <p>
+              Country:{shippingInfo.country}, *Pin: {shippingInfo.pinCode}, *State :{shippingInfo.state}
+            </p>
+          </div>
+       
         <div >
           {placeOrder.map((e) => (
             <div className="mainDivOfOrderItems">
@@ -75,11 +134,23 @@ export const Confirm = () => {
         </div>
 
         <div className="mainDivOfOrderTotal">
-          <div style={{width:"80%"}}></div>
+          <div style={{width:"80%"}}>
+          <input className="Coupon" type="radio" id="html" name="fav_language" value="HTML"/>
+          <label for="html">Apply Coupon</label>
+          <br></br>
+          <input className="enterCoupon" onChange={(e)=>setText(e.target.value)} type="text" placeholder="Enter Coupon Code" />
+          <button className="Apply" onClick={handleAdd} >Apply</button>
+        <ul type = "circle">
+         <li >Use G Points?</li>
+         <p>Every order you place with us is completely safe and secure!</p>
+         <li>Order Requirement:Dropshipping</li>
+      </ul>
+
+          </div>
           <div style={{width:"20%",}}>
             <div className="itemtotal" >
             <p >Item SubTotal </p>
-            <p > ${total}.00</p>
+            <p > ${total}</p>
 
             </div>
 
@@ -91,8 +162,18 @@ export const Confirm = () => {
 
             <div  className="itemtotal">
               <h3>Grand Total</h3>
-              <h1 style={{color:"rgb(211,0,129)"}}>${grand}</h1>
+
+              {handle?(
+
+                <h1 style={{color:"rgb(211,0,129)"}}>${sum}</h1>
+                ):(
+                  <h1 style={{color:"rgb(211,0,129)"}}>${grand}</h1>
+              )}
             </div>
+            <Link to="/payment">
+
+            <button className="placeOrder">PLACE ORDER</button>
+            </Link>
           </div>
 
 
