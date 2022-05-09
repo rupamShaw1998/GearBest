@@ -181,3 +181,6 @@
     opacity: 1;
     font-weight: bold;
 }
+#category:hover .dropdown {
+    display: block;
+}
