@@ -7,8 +7,9 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
 export const Confirm = () => {
-   const shippingInfo =useSelector((store)=>store.shippingInfo);
-console.log("shippingInfo",shippingInfo)
+   var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);
+
+//console.log("shippingInfo",shippingInfo)
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
 
@@ -70,16 +71,20 @@ const[sum,grandSum] =useState(0)
 
 console.log("totalSum",sum)
 
-
+console.log("shippingInfo",shippingInfo)
+var sneha=shippingInfo.firstName
   return (
     <Fragment>
-      <div className="mainConatiner">
-        <div className="gearBestImgInConfirm">
-          <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"></img>
-        </div>
-        <CheckoutSteps activeStep={1} />
-        <h2 style={{ marginLeft: "10%" }}>Shipping Information</h2>
 
+      
+      <div className="mainConatiner">
+    
+        {/* <div className="gearBestImgInConfirm">
+          <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"></img>
+        </div> */}
+        <CheckoutSteps activeStep={1} />
+        <h2 style={{ marginLeft: "4%" }}>Shipping Information</h2>
+    
         {/* {user.map((t) => (
           <div className="container">
             <h3 style={{ display: "flex" }}>
@@ -100,21 +105,33 @@ console.log("totalSum",sum)
 
 
 
-
+        
           <div className="container">
             <h3 style={{ display: "flex" }}>
-              {shippingInfo.firstName} {shippingInfo.lastName}{" "}
+
+           <div style={{marginRight:"5px"}}> {shippingInfo.firstName}</div> <div> {shippingInfo.lastName}{" "}</div>
               <div className="default">Default</div>
             </h3>
+
+          
+          <div>
             <p>
               {shippingInfo.phoneNo} / {shippingInfo.email}
             </p>
-
             <p>{shippingInfo.address}</p>
-
+           
             <p>
               Country:{shippingInfo.country}, *Pin: {shippingInfo.pinCode}, *State :{shippingInfo.state}
             </p>
+
+          </div>
+
+           
+          </div>
+
+          <div style={{width:"90%",display:"flex",margin:"auto",backgroundColor:"white",border:"1px solid gray",padding:"3px",paddingLeft:"15px",paddingRight:"15px",marginBottom:"20px"}}>
+            <p style={{width:"90%"}}>Selected Item(s)</p>
+            <p>Subtotal</p>
           </div>
        
         <div >
