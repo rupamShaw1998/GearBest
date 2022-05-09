@@ -2,6 +2,7 @@
 import axios from "axios";
     export const ADD_TO_CART = " ADD_TO_CART"
     export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM"
+    export const DELETE_ITEM = "DELETE_ITEM"
 
  
   
@@ -14,14 +15,19 @@ import axios from "axios";
      }
   }
   
-    
+   export const deleteItem = (id)=>{
+        return {
+            type : DELETE_ITEM,
+            payload : id
+        }
+   } 
  
   
   // REMOVE FROM CART
-  export const removeItemsFromCart = (id) => {
+  export const removeItemsFromCart = (data) => {
      return {
          type : REMOVE_CART_ITEM,
-         payload:id
+         payload:data
      }
   };
   
