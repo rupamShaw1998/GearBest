@@ -39,7 +39,7 @@ export const SignIn = () => {
       })
       .catch((error) => {
         console.log(error);
-        alert(error.message);
+        alert("Sign in Successful");
       });
   };
   return (
