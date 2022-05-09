@@ -80,9 +80,9 @@ const payload={
     }
    
     
-    return <Fragment>
+    return <Fragment >
 
-       <Checkout></Checkout>
+       {/* <Checkout></Checkout> */}
        <CheckoutSteps activeStep={0}/>
 
                 <h1 className='shippingHeading'>Add New Address</h1>

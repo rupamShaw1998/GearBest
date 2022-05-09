@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import "../styles/Confirm.css";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import "../styles/CheckoutSteps.css"
 
 export const Confirm = () => {
    var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);

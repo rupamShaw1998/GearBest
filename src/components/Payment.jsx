@@ -1,7 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { CheckoutSteps } from "./CheckoutSteps";
+import "../styles/CheckoutSteps.css"
 export const Payment = () => {
 
     var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);
@@ -14,13 +15,14 @@ export const Payment = () => {
 
 
     const pay=()=>{
-      alert("Your order has scuccessfully placed! Thank you for shopping us! ")
+      alert("Your order has scuccessfully placed! Thank you for shopping with us!")
       navigate("/", { replace: false });
     }
 
     
   return (
-    <div style={{width:"100%",backgroundColor:"rgb(247,247,247)"}}>
+    <div style={{width:"100%",backgroundColor:"rgb(247,247,247)",paddingTop:"2%"}}>
+         <CheckoutSteps activeStep={2} />
        
 
        <div style={{display:"flex",width:"90%",margin:"auto",marginTop:"2%",}}>
@@ -62,12 +64,12 @@ export const Payment = () => {
 
            <h3> Grand Total 
              </h3>
-           <h3> {amount}</h3>
+           <h3> ${amount}</h3>
            </div>
            <div style={{display:"flex",justifyContent:"space-between"}}>
            <h3>Payable Amount
              </h3>
-           <h3> {amount}</h3>
+           <h3> ${amount}</h3>
 
            </div>
 
