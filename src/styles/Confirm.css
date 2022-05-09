@@ -1,6 +1,8 @@
 .mainConatiner{
     width:100%;
     background-color:rgb(247,247,247);
+    margin-top: 5%;
+    padding-top: 5%;
 }
 
 .gearBestImgInConfirm{
@@ -12,7 +14,7 @@
 .gearBestImgInConfirm>img{
     height:60px;
     width:190px;
-    margin-left:25%;
+    margin-left:4%;
     margin-top:0.5%;
 }
 .default{
@@ -68,4 +70,42 @@
     display:flex;
     justify-content:space-around;
     line-height: 10px;
+}
+.Coupon{
+    background-color:black;
+    filter: grayscale(1);
+    margin-bottom:2%;
+}
+.enterCoupon{
+    width:40%;
+    padding:1%;
+    font-size:24px;
+    border:none
+}
+.Apply{
+    padding:1%;
+    font-size:24px;
+    background-color:#ffda00;
+    border:none
+}
+.Apply:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.placeOrder{
+    width:100%;
+    font-size:26px;
+    padding:5px;
+    background-color:#ffda00;
+    border:none
+}
+.container{
+    width:90%;
+ padding-left:30px;
+    background-color: white;
+    margin:auto;
+    border:1px solid gray;
+    margin-bottom: 30px;
+}
+.placeOrder:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

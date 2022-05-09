@@ -24,10 +24,11 @@ export const Register1 = () => {
     const register = (e) => {
         e.preventDefault();
 
-        axios.post("http://localhost:7005/register", signup).then((res) => {
+        axios.post("https://morning-scrubland-78864.herokuapp.com/register", signup).then((res) => {
         //    console.log(res.data);
             if(res.data.message){
-                alert(res.data.message)
+               // alert(res.data.message)
+                alert("Email or password is Wrong")
                 return
             }
            alert("Register sucessfully")

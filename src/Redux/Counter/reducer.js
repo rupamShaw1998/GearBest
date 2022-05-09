@@ -1,5 +1,5 @@
 import {ADD_COUNT} from '../Counter/action'
-const init= {counter : 0}
+const init= {counter : 1}
 
 export const counterReducer=(store = init,{type,payload})=>{
     switch(type){

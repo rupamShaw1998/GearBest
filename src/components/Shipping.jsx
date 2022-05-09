@@ -19,7 +19,7 @@ export const Shipping = () => {
  
  
    const shippingInfo =useSelector((store)=>store.shippingInfo);
-   console.log("storeFinal",shippingInfo)
+  // console.log("storeFinal",shippingInfo)
  
    const [firstName,setFirstName] =useState(shippingInfo.firstName);
    const [lastName,setLastName] =useState(shippingInfo.lastName);
@@ -71,7 +71,7 @@ const payload={
    //  localStorage.setItem("shippingInfo",JSON.stringify({address,city,state,country,pinCode,phoneNo}))
       console.log({address,city,state,country,pinCode,phoneNo})
 
-       dispatch(saveShippingInfo({address,city,state,country,pinCode,phoneNo})
+       dispatch(saveShippingInfo({firstName,lastName,email,address,city,state,country,pinCode,phoneNo})
      );
 
     
@@ -80,13 +80,13 @@ const payload={
     }
    
     
-    return <Fragment>
+    return <Fragment >
 
-       <Checkout></Checkout>
+       {/* <Checkout></Checkout> */}
        <CheckoutSteps activeStep={0}/>
 
                 <h1 className='shippingHeading'>Add New Address</h1>
-          <div className='shippingContainer'>
+            <div className='shippingContainer'>
              <div className='shippingBox'>
               
               <form className='shippingForm'
