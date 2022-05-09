@@ -12,9 +12,9 @@ export const Confirm = () => {
   const shippingInfo = useSelector((store) => store.shippingInfo);
   console.log("shippingInfo", shippingInfo)
 
-   var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);
+ 
 
-//console.log("shippingInfo",shippingInfo)
+
 
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
@@ -87,8 +87,6 @@ export const Confirm = () => {
    totalSum=(total-coupon)
    
    grandSum(totalSum);
-
-
   
   }
   else if(text=="Masai30"&&count>=1){
@@ -96,7 +94,6 @@ export const Confirm = () => {
     alert("Coupon Code can only be applied once")
     
   } 
-  
   else{
     alert("Coupon Code Invalid");
 
@@ -105,12 +102,6 @@ export const Confirm = () => {
 const amount=()=>{
   localStorage.setItem("amount",JSON.stringify(sum))
 }
-
-
-
-  console.log("totalSum", sum)
-
-
 
 
   return (
@@ -147,6 +138,8 @@ const amount=()=>{
 
 
 
+
+
         <div className="container">
           <h3 style={{ display: "flex" }}>
             {shippingInfo.firstName} {shippingInfo.lastName}{" "}
@@ -165,14 +158,13 @@ const amount=()=>{
 
 
         
+
           <div className="container">
             <h3 style={{ display: "flex" }}>
 
            <div style={{marginRight:"5px"}}> {shippingInfo.firstName}</div> <div> {shippingInfo.lastName}{" "}</div>
               <div className="default">Default</div>
             </h3>
-
-          
           <div>
             <p>
               {shippingInfo.phoneNo} / {shippingInfo.email}
