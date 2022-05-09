@@ -11,7 +11,7 @@ export const Mobile = () => {
     }, [])
 
     const setData = () => {
-        axios.get("http://localhost:7005/mobile").then((res) => {
+        axios.get("https://morning-scrubland-78864.herokuapp.com/mobile").then((res) => {
             setMobile(res.data);
             console.log(mobile);
         });
