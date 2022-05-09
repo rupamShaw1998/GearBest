@@ -53,7 +53,9 @@ const[sum,grandSum] =useState(0)
  
    setHandle(true)
    totalSum=(total-coupon)
+   
    grandSum(totalSum);
+
 
   
   }
@@ -68,11 +70,13 @@ const[sum,grandSum] =useState(0)
   }
 }
 
+const amount=()=>{
+  localStorage.setItem("amount",JSON.stringify(sum))
+}
 
-console.log("totalSum",sum)
 
-console.log("shippingInfo",shippingInfo)
-var sneha=shippingInfo.firstName
+
+
   return (
     <Fragment>
 
@@ -189,7 +193,7 @@ var sneha=shippingInfo.firstName
             </div>
             <Link to="/payment">
 
-            <button className="placeOrder">PLACE ORDER</button>
+            <button onClick={amount} className="placeOrder">PLACE ORDER</button>
             </Link>
           </div>
 
