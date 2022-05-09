@@ -14,7 +14,11 @@ const counter = useSelector((store) =>
   return (
     <div className='counter'>
         <button  onClick={()=>{
-    dispatch(addCount(-1))
+    if(counter===1){
+      return 
+    }else{
+      dispatch(addCount(-1))
+    }
   }}>-</button>
   <div className='number'>
   {counter} 
