@@ -8,19 +8,24 @@ import { Link, useParams } from "react-router-dom";
 import "../styles/CheckoutSteps.css"
 
 export const Confirm = () => {
+
+  const shippingInfo = useSelector((store) => store.shippingInfo);
+  console.log("shippingInfo", shippingInfo)
+
    var shippingInfo =useSelector((store)=>store.shippingInfo.shippingInfo);
 
 //console.log("shippingInfo",shippingInfo)
+
   const [user, setUser] = useState([]);
   const [placeOrder, setplaceOrder] = useState([]);
 
-const[handle,setHandle] =useState(false)
+  const [handle, setHandle] = useState(false)
 
-const[sum,grandSum] =useState(0)
+  const [sum, grandSum] = useState(0)
 
-  const [text,setText]=useState("")
+  const [text, setText] = useState("")
 
-  
+
   useEffect(() => {
     axios.get(`http://localhost:7005/addAddress`).then(({ data }) => {
       console.log("dbdata", data);
@@ -34,15 +39,41 @@ const[sum,grandSum] =useState(0)
     });
   }, []);
 
-            let total=0;
-    
-            placeOrder.map((item)=>{
-            total+=(item.price)
-      }) 
- 
-  let count =0;
-  
+  let total = 0;
+
+  placeOrder.map((item) => {
+    total += (item.price)
+  })
+
+  let count = 0;
+
   let coupon;
+
+  let grand = total + 11
+  console.log("grand", grand)
+  let totalSum;
+  function handleAdd() {
+
+    if (text == "Masai30" && count == 0) {
+      coupon = Math.ceil(0.3 * total)
+
+
+      setHandle(true)
+      totalSum = (total - coupon)
+      grandSum(totalSum);
+
+
+    }
+    else if (text == "Masai30" && count >= 1) {
+      count++;
+      alert("Coupon Code can only be applied once")
+
+    }
+
+    else {
+      alert("Coupon Code Invalid");
+    }
+
   let grand=total+11
   console.log("grand",grand)
    let totalSum;
@@ -68,12 +99,16 @@ const[sum,grandSum] =useState(0)
   
   else{
     alert("Coupon Code Invalid");
+
   }
-}
 
 const amount=()=>{
   localStorage.setItem("amount",JSON.stringify(sum))
 }
+
+
+
+  console.log("totalSum", sum)
 
 
 
@@ -110,6 +145,25 @@ const amount=()=>{
 
 
 
+
+
+        <div className="container">
+          <h3 style={{ display: "flex" }}>
+            {shippingInfo.firstName} {shippingInfo.lastName}{" "}
+            <div className="default">Default</div>
+          </h3>
+          <p>
+            {shippingInfo.phoneNo} / {shippingInfo.email}
+          </p>
+
+          <p>{shippingInfo.address}</p>
+
+          <p>
+            Country:{shippingInfo.country}, *Pin: {shippingInfo.pinCode}, *State :{shippingInfo.state}
+          </p>
+        </div>
+
+
         
           <div className="container">
             <h3 style={{ display: "flex" }}>
@@ -139,6 +193,7 @@ const amount=()=>{
             <p>Subtotal</p>
           </div>
        
+
         <div >
           {placeOrder.map((e) => (
             <div className="mainDivOfOrderItems">
@@ -156,45 +211,49 @@ const amount=()=>{
         </div>
 
         <div className="mainDivOfOrderTotal">
-          <div style={{width:"80%"}}>
-          <input className="Coupon" type="radio" id="html" name="fav_language" value="HTML"/>
-          <label for="html">Apply Coupon</label>
-          <br></br>
-          <input className="enterCoupon" onChange={(e)=>setText(e.target.value)} type="text" placeholder="Enter Coupon Code" />
-          <button className="Apply" onClick={handleAdd} >Apply</button>
-        <ul type = "circle">
-         <li >Use G Points?</li>
-         <p>Every order you place with us is completely safe and secure!</p>
-         <li>Order Requirement:Dropshipping</li>
-      </ul>
+          <div style={{ width: "80%" }}>
+            <input className="Coupon" type="radio" id="html" name="fav_language" value="HTML" />
+            <label for="html">Apply Coupon</label>
+            <br></br>
+            <input className="enterCoupon" onChange={(e) => setText(e.target.value)} type="text" placeholder="Enter Coupon Code" />
+            <button className="Apply" onClick={handleAdd} >Apply</button>
+            <ul type="circle">
+              <li >Use G Points?</li>
+              <p>Every order you place with us is completely safe and secure!</p>
+              <li>Order Requirement:Dropshipping</li>
+            </ul>
 
           </div>
-          <div style={{width:"20%",}}>
+          <div style={{ width: "20%", }}>
             <div className="itemtotal" >
-            <p >Item SubTotal </p>
-            <p > ${total}</p>
+              <p >Item SubTotal </p>
+              <p > ${total}</p>
 
             </div>
 
-            <div  className="itemtotal">
+            <div className="itemtotal">
               <p>Shipping Cost</p>
               <p>$11.00</p>
             </div>
             <hr />
 
-            <div  className="itemtotal">
+            <div className="itemtotal">
               <h3>Grand Total</h3>
 
-              {handle?(
+              {handle ? (
 
-                <h1 style={{color:"rgb(211,0,129)"}}>${sum}</h1>
-                ):(
-                  <h1 style={{color:"rgb(211,0,129)"}}>${grand}</h1>
+                <h1 style={{ color: "rgb(211,0,129)" }}>${sum}</h1>
+              ) : (
+                <h1 style={{ color: "rgb(211,0,129)" }}>${grand}</h1>
               )}
             </div>
             <Link to="/payment">
 
+
+              <button className="placeOrder">PLACE ORDER</button>
+
             <button onClick={amount} className="placeOrder">PLACE ORDER</button>
+
             </Link>
           </div>
 
