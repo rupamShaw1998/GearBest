@@ -28,7 +28,7 @@ const[sum,grandSum] =useState(0)
     });
   }, []);
   useEffect(() => {
-    axios.get(`http://localhost:7005/placeorder`).then(({ data }) => {
+    axios.get(`https://morning-scrubland-78864.herokuapp.com/placeorder`).then(({ data }) => {
       console.log("placeorderdata", data);
       setplaceOrder(data);
     });
