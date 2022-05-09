@@ -24,22 +24,22 @@ export const SignIn = () => {
     dispatch(isAuth(true));
     navigate("")
 
-    // axios
-    //   .post("http://localhost:7005/login", login)
-    //   .then((res) => {
-    //     console.log(res);
-    //     if (res.status === 200) {
-    //       alert("login sucesfully");
+    axios
+      .post("http://localhost:7005/login", login)
+      .then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          alert("login sucesfully");
           
-    //     } else if (res.status === 500) {
-    //       alert("Email or password is wrong");
-    //       return;
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     alert(error.message);
-    //   });
+        } else if (res.status === 500) {
+          alert("Email or password is wrong");
+          return;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        alert(error.message);
+      });
   };
   return (
     <div>
