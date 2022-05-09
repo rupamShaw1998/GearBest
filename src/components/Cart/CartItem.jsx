@@ -26,7 +26,7 @@ export const CartItem = () => {
   //console.log(data)
 
   useEffect(() =>{
-    axios.get("http://localhost:7005/addtocart").then(({data})=>{
+    axios.get("https://morning-scrubland-78864.herokuapp.com/addtocart").then(({data})=>{
       setData(data)
     })
   },[])

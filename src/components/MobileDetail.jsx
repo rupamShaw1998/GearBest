@@ -7,11 +7,12 @@ import '../styles/ProductDetails.css'
 import {Counter} from './Counter'
 import {Icons} from './Icons'
 import {Link} from 'react-router-dom'
- 
+import {useDispatch} from 'react-redux'
+import {addItemsToCart} from "../Redux/Cart/cartaction"
 
 export const MobileDetail = () => {
   const [product,setProduct] = useState([])
-    
+  const dispatch = useDispatch()
     let {id} = useParams()
  
     useEffect(() => {
@@ -29,6 +30,7 @@ console.log(product)
     body:JSON.stringify(product)
   })
    localStorage.setItem('addtocart',JSON.stringify(product))
+   dispatch(addItemsToCart(product))
   }
 
   const setOrder=()=>{
