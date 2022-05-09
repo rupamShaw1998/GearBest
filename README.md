@@ -1,16 +1,16 @@
-Gearbest Clone
-Hello, we are writing this blog to share our team’s experience of cloning one of the popular gadgets products website named “Gearbest.com”. This project was assigned to us in Unit 5 construct week in Masai School. Gearbest offers customers services they won’t find anywhere else, all available to browse on practically in any device.
+<h1>Gearbest Clone</h1>
+<p>Hello, we are writing this blog to share our team’s experience of cloning one of the popular gadgets products website named “Gearbest.com”. This project was assigned to us in Unit 5 construct week in Masai School. Gearbest offers customers services they won’t find anywhere else, all available to browse on practically in any device.</p>
 
 Team Members:
 
-Sneha | Hajira | Vaishnavi | Rupam | Sumit
+<a href="">Sneha</a> | <a href="">Hajira</a> | <a href="">Vaishnavi</a> | <a href="">Rupam</a> | <a href="">Sumit</a>
 
 Tech Stack:
 
 HTML | CSS | JavaScript | MERN | Redux | Material UI
 
-Landing Page:
-
+<h4>Landing Page:</h4>
+<img src="./src/Images/websitePic.png" />
 
 We used the following resources:
 
@@ -20,11 +20,11 @@ We used the following resources:
 
 ⬤ https://mdn.com
 
-We tried our best to create pixel perfect cloned site. At first we decided to complete the basic user flow of the project that is user should see landing page of the website, user should be able to sign up and sign in and user should be able to shop followed by placing order after completing the payment process.
+<p>We tried our best to create pixel perfect cloned site. At first we decided to complete the basic user flow of the project that is user should see landing page of the website, user should be able to sign up and sign in and user should be able to shop followed by placing order after completing the payment process.</p><br><br>
 
-Challenges We Faced And How We Solved Them:
+<h4>Challenges We Faced And How We Solved Them:</h4>
 
-We started the project by creating a whatsapp group which is first and most important task that is connecting with our teammates but I didn’t have contact number of other members so I tried to connect them on slack and ask their contact number and successfully created a whatsapp group or we can say a workspace where we can share our tasks, work progress and our ideas.
+<p>We started the project by creating a whatsapp group which is first and most important task that is connecting with our teammates but I didn’t have contact number of other members so I tried to connect them on slack and ask their contact number and successfully created a whatsapp group or we can say a workspace where we can share our tasks, work progress and our ideas.
 
 Followed by that, we scheduled our first zoom meeting on the first day where we discussed how we can further proceed during this whole construct week. We researched the whole website and assigned ourselves with different parts of the website.
 
@@ -32,8 +32,8 @@ Our next challenge was to keep record of the data of how and how many tasks had 
 
 Moving further, a new challenge appeared as one of our teammate didn’t respond in the entire construct week. So again we had to reassign our tasks among ourselves.
 
-While struggling with obstacles we learned various new things and we finally completed the cloning of the Gearbest.com website.
+While struggling with obstacles we learned various new things and we finally completed the cloning of the Gearbest.com website.</p>
 
 Github link: https://github.com/rupamShaw1998/GearBest
 
-Thank You
+<h3>Thank You</h3>
