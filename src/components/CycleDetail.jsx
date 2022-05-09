@@ -15,13 +15,13 @@ export const CycleDetail = () => {
     let {id} = useParams()
  
     useEffect(() => {
-      axios.get(`http://localhost:7005/outdoor/${id}`).then(({data})=>{
+      axios.get(`https://morning-scrubland-78864.herokuapp.com/outdoor/${id}`).then(({data})=>{
           setProduct(data)
   })
   },[])
 console.log(product)
   const setData=()=>{
-    fetch(`http://localhost:7005/addtocart`,{
+    fetch(`https://morning-scrubland-78864.herokuapp.com/addtocart`,{
     method:'POST',
     headers:{
       "Content-Type":"application/json"
@@ -31,7 +31,7 @@ console.log(product)
    localStorage.setItem('addtocart',JSON.stringify(product))
   }
   const setOrder=()=>{
-    fetch(`http://localhost:7005/placeorder`,{
+    fetch(`https://morning-scrubland-78864.herokuapp.com/placeorder`,{
     method:'POST',
     headers:{
       "Content-Type":"application/json"
