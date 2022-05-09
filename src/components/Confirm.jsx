@@ -72,8 +72,6 @@ const amount=()=>{
 
   return (
     <Fragment>
-
-      
       <div className="mainConatiner">
     
         {/* <div className="gearBestImgInConfirm">
