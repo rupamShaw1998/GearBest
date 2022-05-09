@@ -1,7 +1,7 @@
 
 
 
-import {ADD_TO_CART,REMOVE_CART_ITEM} from "./cartaction"
+import {ADD_TO_CART,REMOVE_CART_ITEM,DELETE_ITEM} from "./cartaction"
 const init = {
     cartItems: [],
     totalQuantity : 0
@@ -25,13 +25,7 @@ export const cartReducer = (
         if (isItemExist) {
             isItemExist.quantity++
             isItemExist.totalprice+= payload.price
-        //   return {
-        //     ...store,
-        //     cartItems:[...store.cartItems,isItemExist]
-        //     // cartItems: store.cartItems.map((i) =>
-        //     //   i._id === isItemExist._id ? item : i
-        //     // ),
-        //   };
+           
         } else {
            return {
             ...store,
@@ -39,13 +33,20 @@ export const cartReducer = (
           };
         }
   
-      case REMOVE_CART_ITEM:
-        return {
-          ...store,
-          cartItems: store.cartItems.filter((i) => i._id !== payload),
-        };
+      // case REMOVE_CART_ITEM:
+
+      //   const items = payload;
+
+      //   const isItemExists = store.cartItems.find(
+      //     (i) => i._id === items._id
+      //   );
+      //   //console.log(isItemExists)
+      //   isItemExists.quantity--
+      //   isItemExists.totalprice -= payload.price
+        
   
-      
+      case DELETE_ITEM :return{  ...store,
+        cartItems: store.cartItems.filter((i) => i._id != payload),}
   
       default:
         return store;

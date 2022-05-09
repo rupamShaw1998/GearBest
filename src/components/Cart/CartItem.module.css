@@ -58,3 +58,10 @@ img{
     overflow: hidden;
     /* border:1px solid black */
 }
+.deleteButton{
+    background-color: #008CBA;
+   color: white;
+   border: 0px;
+   padding: 10px;
+   width: 80px;
+}

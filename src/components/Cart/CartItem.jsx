@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios"
 import {Link} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
-import { addItemsToCart } from "../../Redux/Cart/cartaction";
+import { addItemsToCart,deleteItem ,removeItemsFromCart } from "../../Redux/Cart/cartaction";
 import { useCallback } from "react";
 
 export const CartItem = () => {
@@ -13,7 +13,7 @@ export const CartItem = () => {
   const cartData = useSelector((store)=>{
    return  store.cartItems.cartItems
   })
-  //console.log("cartData",cartData)
+  console.log("cartData",cartData)
   
   const dispatch = useDispatch();
   // const cartItems = useSelector((store)=>{
@@ -36,9 +36,11 @@ export const CartItem = () => {
    dispatch(addItemsToCart(item))
      
   }
-//   const  removeQuantityHandler = (item,e)=>{
+ const decreaseQuantityHandler = (items,e)=>{
+   dispatch()
   
-//  }
+ }
+
   return (
    <div>{cartData.map((e)=>{
      
@@ -69,7 +71,7 @@ export const CartItem = () => {
          <div className={styles.increDecreButton}>
            <button
              className={styles.buttonIncrement}
-             onClick={""}
+             onClick={decreaseQuantityHandler.bind(e._id,e)}
            >
              -
            </button>
@@ -90,10 +92,13 @@ export const CartItem = () => {
            </div>
 
            <div>
-             <a href="">Favourits</a>
+             <a href="">Favourite</a>
            </div>
            <div>
-             <button>Delete</button>
+             <button className={styles.deleteButton} onClick={()=>{
+               
+               dispatch(deleteItem(e._id))
+             }}>Delete</button>
            </div>
          </div>
        </div>
