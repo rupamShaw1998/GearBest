@@ -14,7 +14,7 @@ export const CartPage = () => {
   }, [])
 
   const setData = () => {
-    axios.get("http://localhost:7005/addtocart").then((res) => {
+    axios.get("https://morning-scrubland-78864.herokuapp.com/addtocart").then((res) => {
       setProduct(res.data);
       //  console.log(allprod);
     });
