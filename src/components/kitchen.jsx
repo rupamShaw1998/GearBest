@@ -11,7 +11,7 @@ export const Kitchen = () => {
     }, [])
 
     const setData = () => {
-        axios.get("http://localhost:7005/kitchen").then((res) => {
+        axios.get("https://morning-scrubland-78864.herokuapp.com/kitchen").then((res) => {
             setKitchen(res.data);
             console.log(kitchen);
         });

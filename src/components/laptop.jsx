@@ -11,7 +11,7 @@ export const Laptop = () => {
     }, [])
 
     const setData = () => {
-        axios.get("http://localhost:7005/laptop").then((res) => {
+        axios.get("https://morning-scrubland-78864.herokuapp.com/laptop").then((res) => {
             setlaptop(res.data);
             console.log(laptop);
         });
