@@ -25,20 +25,20 @@ export const LandingPage = () => {
   }, [])
 
   const setData = () => {
-    axios.get("http://localhost:7005/all").then((res) => {
+    axios.get("https://morning-scrubland-78864.herokuapp.com/all").then((res) => {
       setAllpro(res.data);
       //  console.log(allprod);
     });
   };
   const Collection = () => {
-    axios.get("http://localhost:7005/collection").then((res) => {
+    axios.get("https://morning-scrubland-78864.herokuapp.com/collection").then((res) => {
       setColl(res.data);
       //  console.log(coll);
     });
   };
 
   const SuperDeals = () => {
-    axios.get("http://localhost:7005/superDeal").then((res) => {
+    axios.get("https://morning-scrubland-78864.herokuapp.com/superDeal").then((res) => {
       setSuperDeals(res.data);
       console.log(superDeals);
     });

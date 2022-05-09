@@ -14,7 +14,7 @@ export const Cycle = ({ sort }) => {
     }, [])
 
     const setData = () => {
-        axios.get("http://localhost:7005/outdoor").then((res) => {
+        axios.get("https://morning-scrubland-78864.herokuapp.com/outdoor").then((res) => {
             setCycle(res.data);
             //  console.log(mobile);
         });
