@@ -10,6 +10,7 @@
 .recommendDiv {
     display: grid;
     grid-template-columns: repeat(4, 23%);
+    width:95%;
     border: 1px solid rgb(232, 213, 213);
     margin: auto;
 

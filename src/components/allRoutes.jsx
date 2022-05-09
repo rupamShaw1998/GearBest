@@ -20,6 +20,7 @@ import { Category } from "./allCatagory";
 import { SignInPage } from "./auth";
 import {Shipping} from "./Shipping"
 import {Confirm} from "./Confirm"
+import { Payment } from "./Payment";
 export const AllRoutes=()=>{
 
     return(
@@ -42,7 +43,7 @@ export const AllRoutes=()=>{
         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
         <Route path="/shipping" element={<Shipping/>}></Route>
         <Route path="/order" element={<Confirm/>}></Route>
-
+        <Route path="/payment" element={<Payment/>}></Route>
 
       </Routes>
      <Footer></Footer>
