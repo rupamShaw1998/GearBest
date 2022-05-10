@@ -1,5 +1,5 @@
 <h1>Gearbest Clone</h1>
-<p>Hey👋, this is of cloning one of the popular gadgets products website named “Gearbest.com”. This project was assigned to us in Unit 5 construct week in Masai School. Gearbest offers customers services they won’t find anywhere else, all available to browse on practically in any device.</p>
+<p>Hey👋, this is the cloning of one of the popular gadgets products website named “Gearbest.com”. This project was assigned to us in Unit 5 construct week in Masai School. Gearbest offers customers services they won’t find anywhere else, all available to browse on practically in any device.</p>
 <h3>Deploy Link : </h3>
 <a href="https://gearbestclonemasai.netlify.app/">
 gearbestclonemasai.netlify.app/ </a>
