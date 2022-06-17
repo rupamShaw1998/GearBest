@@ -16,7 +16,7 @@ export const Payment = () => {
 
     const pay=()=>{
       alert("Your order has scuccessfully placed! Thank you for shopping with us!")
-      navigate("/", { replace: false });
+      navigate("/otp", { replace: false });
     }
 
     

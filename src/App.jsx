@@ -18,8 +18,7 @@ import { SignInPage } from './components/auth';
 import {Shipping} from './components/Shipping'
 import {Confirm} from './components/Confirm'
 import {Payment} from './components/Payment'
-//import { AllRoutes } from './components/allRoutes';
-import {useDispatch, useSelector} from "react-redux"
+import {Otp} from './components/otp'
 import {Protected} from "./components/PrivateCounter"
 
 
@@ -27,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-    
+      
       <Routes>
         <Route path='/auth' element={<SignInPage/>}></Route>
          <Route path="/catagorys" element={<Protected><Category /></Protected>}></Route>
@@ -43,8 +42,10 @@ function App() {
          <Route path="/CycleDetail/:id" element={<Protected><CycleDetail /></Protected>}></Route>
          <Route path="/order" element={<Protected><Confirm/></Protected>}></Route>
          <Route path="/payment" element={<Protected><Payment/></Protected>}></Route>
+         <Route path='/otp' element={<Otp/>}></Route>
      </Routes>
      <Footer></Footer>
+     
       
    
     </div>
