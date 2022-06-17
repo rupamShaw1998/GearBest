@@ -16,19 +16,14 @@ import { MobileDetail } from "./components/MobileDetail";
 import { CycleDetail } from "./components/CycleDetail";
 import { SignInPage } from './components/auth';
 import {Shipping} from './components/Shipping'
+import {Confirm} from './components/Confirm'
+import {Payment} from './components/Payment'
 //import { AllRoutes } from './components/allRoutes';
 import {useDispatch, useSelector} from "react-redux"
 import {Protected} from "./components/PrivateCounter"
 
 
 function App() {
-  const [sig,setSig]=useState(false)
-  const status = useSelector((store)=>{
-    return store.isLogin.isLogin
-  })
-
- // console.log(status)
-
   return (
     <div className="App">
       <Navbar />
@@ -44,8 +39,10 @@ function App() {
          <Route path='/KitchenDetail/:id' element={<Protected><KitchenDetail /></Protected>}></Route>
          <Route path='/LaptopDetail/:id' element={<Protected><LaptopDetail /></Protected>}></Route>
          <Route path='/ScienceDetail/:id' element={<Protected><ScienceDetail /></Protected>}></Route>
-       <Route path='/MobileDetail/:id' element={<Protected><MobileDetail /></Protected>}></Route>
-        <Route path="/CycleDetail/:id" element={<Protected><CycleDetail /></Protected>}></Route>
+         <Route path='/MobileDetail/:id' element={<Protected><MobileDetail /></Protected>}></Route>
+         <Route path="/CycleDetail/:id" element={<Protected><CycleDetail /></Protected>}></Route>
+         <Route path="/order" element={<Protected><Confirm/></Protected>}></Route>
+         <Route path="/payment" element={<Protected><Payment/></Protected>}></Route>
      </Routes>
      <Footer></Footer>
       
@@ -56,17 +53,3 @@ function App() {
 
 export default App;
 
-//<Navbar />
-// <Routes>
-//         <Route path="/catagorys" element={<Category />}></Route>
-//         <Route path="" element={<LandingPage />}></Route>
-//         <Route path="/product/:id" element={<ProductDetail />}></Route>
-//         <Route path="/productDetails/cart/:id" element={<Cart />}></Route>
-//         <Route path='/cartPage' element={<CartPage />}></Route>
-//         <Route path='/KitchenDetail/:id' element={<KitchenDetail />}></Route>
-//         <Route path='/LaptopDetail/:id' element={<LaptopDetail />}></Route>
-//         <Route path='/ScienceDetail/:id' element={<ScienceDetail />}></Route>
-//         <Route path='/MobileDetail/:id' element={<MobileDetail />}></Route>
-//         <Route path="/CycleDetail/:id" element={<CycleDetail />}></Route>
-//       </Routes>
-//      <Footer></Footer>
