@@ -15,6 +15,7 @@ import { ScienceDetail } from "./components/ScienceDetail";
 import { MobileDetail } from "./components/MobileDetail";
 import { CycleDetail } from "./components/CycleDetail";
 import { SignInPage } from './components/auth';
+import {Shipping} from './components/Shipping'
 //import { AllRoutes } from './components/allRoutes';
 import {useDispatch, useSelector} from "react-redux"
 import {Protected} from "./components/PrivateCounter"
@@ -36,6 +37,7 @@ function App() {
         <Route path='/auth' element={<SignInPage/>}></Route>
          <Route path="/catagorys" element={<Protected><Category /></Protected>}></Route>
          <Route path="/" element={<LandingPage />}></Route>
+         <Route path="/shipping" element={<Protected><Shipping/></Protected>}></Route>
          <Route path="/product/:id" element={<Protected><ProductDetail /></Protected>}></Route>
          <Route path="/productDetails/cart/:id" element={<Protected><Cart /></Protected>}></Route>
          <Route path='/cartPage' element={<Protected><CartPage /></Protected>}></Route>
