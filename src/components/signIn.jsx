@@ -22,7 +22,7 @@ export const SignIn = () => {
   const checklogin = (e) => {
     e.preventDefault();
     dispatch(isAuth(true));
-    navigate("")
+    navigate("/")
 
     axios
     
