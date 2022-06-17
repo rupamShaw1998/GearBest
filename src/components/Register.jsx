@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
-export const Register1 = () => {
+export const Register1 = (props) => {
     const [signup, setSign] = useState({
 
         email: "",
@@ -26,11 +26,13 @@ export const Register1 = () => {
 
         axios.post("https://morning-scrubland-78864.herokuapp.com/register", signup).then((res) => {
         //    console.log(res.data);
-            if(res.data.message){
-               // alert(res.data.message)
-                alert("Email or password is Wrong")
-                return
-            }
+            // if(res.data.message){
+            //    // alert(res.data.message)
+            //     alert("Email or password is Wrong")
+            //     return
+            // }
+           
+           props.setSet(true)
            alert("Register sucessfully")
         });
     };

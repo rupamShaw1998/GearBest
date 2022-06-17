@@ -75,11 +75,11 @@ export const Navbar = () => {
                         <div id="signIn">                          
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
-                               <div>Sign In</div>
+                             <div>Sign In</div>
                             </div>
                             <div className="dropdown" id="sign-box">
                                 <p>Welcome to Gearbest</p>
-                                <button id="yellow-btn">Sign In</button>
+                                <Link to={"/auth"}><button id="yellow-btn">Sign In</button></Link>
                                 <div id="google">
                                     <div style={{color: "grey"}}>or connect via</div>
                                     <img src="https://freepngimg.com/download/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="" />
