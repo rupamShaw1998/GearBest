@@ -105,7 +105,7 @@ const amount=()=>{
         ))} */}
 
 
-        <div className="container">
+        <div className="containeradd">
           <h3 style={{ display: "flex" }}>
             {shippingInfo.firstName} {shippingInfo.lastName}{" "}
             <div className="default">Default</div>

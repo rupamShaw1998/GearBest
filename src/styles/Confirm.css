@@ -1,8 +1,10 @@
 .mainConatiner{
-    width:100%;
+    width:90%;
     background-color:rgb(247,247,247);
     margin-top: 5%;
     padding-top: 5%;
+    /* border: 1px solid red; */
+    margin: auto;
 }
 
 .gearBestImgInConfirm{
@@ -98,13 +100,14 @@
     background-color:#ffda00;
     border:none
 }
-.container{
+.containeradd{
     width:90%;
- padding-left:30px;
+    padding-left:30px;
     background-color: white;
     margin:auto;
     border:1px solid gray;
     margin-bottom: 30px;
+    /* border: 1px solid red; */
 }
 .placeOrder:hover{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
