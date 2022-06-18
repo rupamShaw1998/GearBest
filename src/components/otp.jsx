@@ -24,18 +24,19 @@ export const Otp = ()=>{
     }
     return (
         <>
-          <div class="container">
-        <p>OTP is sent on your mobile number.OTP is valid for 5mins.</p>
-        <div class="otp">
-            <h3>OTP**</h3>
-            <div class="input-field">
-                <form onSubmit={otpHandler}>
-                    <input type="text" id="otp" placeholder="Otp 1234" onChange={otpInputHandler}/>
-                    <input type="submit" id="pay" value="CONFIRM" />
-                </form>
+            <div class="container">
+                <p>✔️ OTP is sent on your email.</p>
+                <div style={{fontSize: "12px", color: "grey"}}>OTP will be valid for 5 minutes</div>
+                <div class="otp">
+                    {/* <h3>OTP**</h3> */}
+                    <div class="input-field">
+                        <form onSubmit={otpHandler}>
+                            <input type="text" id="otp" placeholder="Enter OTP" onChange={otpInputHandler}/>
+                            <input type="submit" id="pay" value="Verify" />
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
         </>
     )
 }
