@@ -1,9 +1,10 @@
-
-
 .container {
     width: 300px;
     height: 400px;
-    border: 1px solid;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -15,9 +16,11 @@
     text-align: center;
 }
 
-.otp {
+#otp {
     width: 100%;
-    margin-right: 40px;
+    margin-left: -10px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
 }
 
 .input-field input {
@@ -32,7 +35,9 @@
     background-color: blueviolet;
     width: 50%;
     color: white;
+    margin-left: 25%;
     padding: 10px;
     font-size: 18px;
     border: none;
+    border-radius: 5px;
 }

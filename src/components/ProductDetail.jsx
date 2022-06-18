@@ -8,22 +8,21 @@ import {Link} from 'react-router-dom'
 import { addItemsToCart } from "../Redux/Cart/cartaction"
 import { useDispatch } from "react-redux"
 
-
- 
-
 export const ProductDetail = () => {
   const [product,setProduct] = useState([])
     
-   const dispatch = useDispatch()
+  const dispatch = useDispatch()
   let {id} = useParams()
  
-    useEffect(() => {
-      axios.get(`https://morning-scrubland-78864.herokuapp.com/all/${id}`).then(({data})=>{
-          setProduct(data)
-          
+  useEffect(() => {
+    axios.get(`https://morning-scrubland-78864.herokuapp.com/all/${id}`).then(({data})=>{
+        setProduct(data)
+        
   })
-  },[])
-  console.log(product)
+  }, [])
+
+  console.log(product);
+
   const setData=()=>{
     fetch(`https://morning-scrubland-78864.herokuapp.com/addtocart`,{
     method:'POST',
@@ -45,9 +44,9 @@ export const ProductDetail = () => {
     },
     body:JSON.stringify(product)
   })
-   localStorage.setItem('placeorder',JSON.stringify(product))
-
+  localStorage.setItem('placeorder',JSON.stringify(product))
   }
+
     return (
       <div className="product_details">
           <div className="flex_container">
@@ -82,31 +81,26 @@ export const ProductDetail = () => {
                   <div className="qty">
                   <p className="product">QTY : </p>
                   <div>
-                 <Counter />
+                    <Counter />
                   </div>
                   <p>in stock</p>
-                  </div>
-
-                
-               
-              </div>
-          
-             
+                  </div>               
+              </div>                      
           </div>
           <div className="cart">
-          <div className="socialmedia">
-            <Icons />
+            <div className="socialmedia">
+              <Icons />
             </div>
-          <div className="cartbtn">
-            <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
-          <button className="linkbtn"  onClick={setData}>Add To Cart</button>
-          </Link>
-          <Link id="linkbutton" to={`/shipping`}>
-          <button className="linkbtn" onClick={setOrder}>Buy Now</button>
-           </Link>
-           <button>PayPal</button>
-           </div>
-           </div>
+            <div className="cartbtn">
+              <Link id="linkbutton" to={`/productDetails/cart/${product._id}`}>
+              <button className="linkbtn"  onClick={setData}>Add To Cart</button>
+              </Link>
+              <Link id="linkbutton" to={`/shipping`}>
+              <button className="linkbtn" onClick={setOrder}>Buy Now</button>
+              </Link>
+              <button>PayPal</button>
+            </div>
+          </div>
       </div>
     );
   };
