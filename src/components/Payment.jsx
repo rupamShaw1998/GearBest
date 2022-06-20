@@ -75,7 +75,7 @@ export const Payment = () => {
 
           </div>
 
-          <button onClick={pay}className='placeOrder'>PAY NOW</button>
+          <button onClick={pay} className='placeOrder'>PAY NOW</button>
 
            </div>
        </div>

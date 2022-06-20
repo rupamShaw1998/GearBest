@@ -1,7 +1,7 @@
-.container {
+.otpcontainer {
     width: 300px;
     height: 400px;
-    margin-top: 20px;
+  
     border: 0;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
+    margin: auto;
+    margin-top: 40px;
     justify-content: space-around;
 }
 
