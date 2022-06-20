@@ -140,7 +140,7 @@ export const Footer = () => {
           <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" >
           </img>
           <p className="font"> AFFORDABLE QUALITY</p>
-        <p className="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FUN SHOPPING</p>
+        <p className="font" style={{textAlign: "left"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FUN SHOPPING</p>
           
      </div> 
 

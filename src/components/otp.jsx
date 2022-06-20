@@ -24,7 +24,7 @@ export const Otp = ()=>{
     }
     return (
         <>
-            <div class="container">
+            <div class="otpcontainer">
                 <p>✔️ OTP is sent on your email.</p>
                 <div style={{fontSize: "12px", color: "grey"}}>OTP will be valid for 5 minutes</div>
                 <div class="otp">
