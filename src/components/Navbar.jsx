@@ -1,8 +1,33 @@
 import "../styles/Navbar.css";
 import {Link} from 'react-router-dom'
-import {CartPage} from '../components/CartPage'
+import jwt_decode from 'jwt-decode'
+import {useEffect , useState} from 'react'
+import { useDispatch } from "react-redux";
+import { isAuth } from "../Redux/isAuth/action";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [userName , setUserName] = useState('SignIn')
+    function handleCallbackResponse(res){
+        var userID = jwt_decode(res.credential);
+        setUserName(userID.name)
+        dispatch(isAuth(true));
+        navigate('/')
+    }
+    useEffect(()=>{
+        google.accounts.id.initialize({
+            client_id:'1018777173719-po881ts69fnll531n7v5ksti1g22v10t.apps.googleusercontent.com',
+            callback:handleCallbackResponse
+        })
+    
+        google.accounts.id.renderButton(
+            document.getElementById('signInDiv'),
+            {theme:'outline'}
+        )
+    
+    },[])
     return (
         <div id="nav">
             <div id="nav-up">
@@ -75,14 +100,14 @@ export const Navbar = () => {
                         <div id="signIn">                          
                             <div style={{display: "flex"}}>
                                 <img style={{width: "19px", height: "19px"}} src="http://cdn.onlinewebfonts.com/svg/img_212095.png" alt="" />
-                             <div>Sign In</div>
+                            <div>{userName}</div>
                             </div>
                             <div className="dropdown" id="sign-box">
                                 <p>Welcome to Gearbest</p>
                                 <Link to={"/auth"}><button id="yellow-btn">Sign In</button></Link>
                                 <div id="google">
                                     <div style={{color: "grey"}}>or connect via</div>
-                                    <img src="https://freepngimg.com/download/google/66903-google-pay-gboard-platform-logo-cloud.png" alt="" />
+                                    <div id="signInDiv" style={{marginLeft:"5px"}}></div>
                                 </div>
                                 <p style={{paddingTop: "22px", borderTop: "1px solid rgb(196, 196, 196)"}}>Register on Gearbest: Earn 10 points</p>
                                 <Link to={"/auth"}><button id="blue-btn">Register</button></Link>
