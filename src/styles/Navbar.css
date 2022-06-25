@@ -133,6 +133,7 @@
 #google {
     display: flex;
     margin-left: 18px;
+    
 }
 #google>img {
     width: 42px;
@@ -155,6 +156,7 @@
 }
 #signIn:hover .dropdown {
     display: block;
+    padding: 10px;
 }
 #nav-down {
     /* border: 1px solid green; */
