@@ -14,8 +14,10 @@ export const Navbar = () => {
         var userID = jwt_decode(res.credential);
         alert(`${userID.name} ! You are successfully signed in`)
         setUserName(userID.name)
+       
         dispatch(isAuth(true));
         navigate('/')
+        
         
     }
     useEffect(()=>{
