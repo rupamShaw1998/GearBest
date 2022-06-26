@@ -12,9 +12,11 @@ export const Navbar = () => {
     const [userName , setUserName] = useState('SignIn')
     function handleCallbackResponse(res){
         var userID = jwt_decode(res.credential);
+        alert(`${userID.name} ! You are successfully signed in`)
         setUserName(userID.name)
         dispatch(isAuth(true));
         navigate('/')
+        
     }
     useEffect(()=>{
         google.accounts.id.initialize({
