@@ -12,6 +12,19 @@ export const SignIn = () => {
     //  password: "",
   });
 
+  const checkEmail = (str) => {
+    let f1=false, f2=false;
+    for(let i=0; i<str.length; i++) {  
+      if(str[i]=='@')
+        f1=true;
+      if(str[i]=='.')
+        f2=true;
+      if(f1 && f2)
+        return true;
+    }
+    return false;
+  }
+
   const loginData = (e) => {
     const { id, value } = e.target;
     setlogin({
@@ -21,8 +34,12 @@ export const SignIn = () => {
   };
   const checklogin = (e) => {
     e.preventDefault();
+    if(!checkEmail(login.email)) {
+      alert("please enter proper email");
+      return;
+    }
     dispatch(isAuth(true));
-    navigate("/")
+    
 
     axios
     
@@ -41,6 +58,7 @@ export const SignIn = () => {
         console.log(error);
         alert("Sign in Successful");
       });
+      navigate("/");
   };
   return (
     <div>
